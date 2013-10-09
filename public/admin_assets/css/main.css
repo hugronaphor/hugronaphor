@@ -1,0 +1,52 @@
+/*body { padding-top: 60px; padding-bottom: 40px; }*/
+/*table form { margin: 0 6px; }
+table .btn { margin-right: 4px; }*/
+
+body {
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  background: #f0f0f0 url(../img/bgnoise_lg.jpg);
+  font-weight: 300;
+  font-size: 15px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.admin.main-wrapper {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  top:10px;
+
+}
+.admin .admin-slogan {
+  margin: 0 0 10px 0;
+}
+
+.admin .top-header {
+  border-bottom: 2px #8c1515 solid;
+}
+
+.admin .top-header a:link {text-decoration:none;}
+.admin .top-header a:visited {text-decoration:none;}
+.admin .top-header a:hover {text-decoration:none;}
+.admin .top-header a:active {text-decoration:none;}
+
+.admin .admin-slogan .admin-logo{
+  margin: 0 10px 0 0;
+}
+
+.admin .admin-slogan .admin-slogan{
+  color: #343434;
+  font-weight: normal;
+  font-family: 'Ultra', sans-serif;   
+  font-size: 30px;
+  top: 6px;
+  position: relative;
+  text-shadow: 0 2px transparent, 0 3px #c6c6c6;
+}
+.admin .admin-slogan .admin-slogan:hover{
+  color: #369737;
+  text-shadow: 0 2px transparent, 0 3px #c9c9c9;
+}
