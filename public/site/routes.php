@@ -2,7 +2,7 @@
 
 // Home page
 Route::get('/', array('as' => 'home', function() {
-    return View::make('site::index')->with('entry', Page::find(8));
+    return View::make('site::index')->with('entry', Page::first());
   }));
 
 // Article list

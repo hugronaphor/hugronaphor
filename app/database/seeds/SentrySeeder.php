@@ -1,5 +1,8 @@
 <?php
 
+// To create all Sentry tables run:
+// php artisan migrate --package=cartalyst/sentry
+
 use App\Models\User;
 
 class SentrySeeder extends Seeder {

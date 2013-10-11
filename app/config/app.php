@@ -165,8 +165,11 @@ return array(
     'View' => 'Illuminate\Support\Facades\View',
     'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
     'Notification' => 'Krucas\Notification\Facades\Notification',
+    'Image' => 'App\Facades\ImageFacade',
+    
     'Article' => 'App\Models\Article',
     'Page' => 'App\Models\Page',
-    'Image' => 'App\Facades\ImageFacade',
+    'Profile' => 'App\Models\Profile',
+    
   ),
 );

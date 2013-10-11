@@ -10,7 +10,7 @@
     <div class="admin main-wrapper">
       @include('admin._partials.header')
 
-      <div class="content">
+      <div class="content admin">
         @yield('main')
       </div>
     </div>

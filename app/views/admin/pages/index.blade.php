@@ -10,7 +10,7 @@
 
 {{ Notification::showAll() }}
 
-<table class="table table-striped">
+<table class="table table-hover table-condensed table-bordered">
   <thead>
     <tr>
       <th>#</th>
