@@ -13,6 +13,7 @@ use Auth,
 class AuthController extends BaseController {
 
   public function getLogin() {
+    //return 'hi';
     return View::make('admin.auth.login');
   }
 

@@ -9,6 +9,10 @@
 {{ HTML::script('admin_assets/js/menu.js'); }}
 {{ HTML::script('admin_assets/js/main.js'); }}
 
+<!--CKEditor-->
+{{ HTML::script('assets/ckeditor/ckeditor.js'); }}
+{{ HTML::style('assets/ckeditor/content.css'); }}
+
 <!--Styles-->
 {{ HTML::style('admin_assets/css/main.css'); }}
 {{ HTML::style('admin_assets/css/menu.css'); }}

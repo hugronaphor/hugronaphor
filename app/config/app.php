@@ -103,7 +103,6 @@ return array(
     'Illuminate\Workbench\WorkbenchServiceProvider',
     'Cartalyst\Sentry\SentryServiceProvider',
     'Krucas\Notification\NotificationServiceProvider',
-    'App\Site\SiteServiceProvider',
   ),
   /*
     |--------------------------------------------------------------------------
@@ -170,6 +169,7 @@ return array(
     'Article' => 'App\Models\Article',
     'Page' => 'App\Models\Page',
     'Profile' => 'App\Models\Profile',
+    'Variable' => 'App\Models\Variable',
     
   ),
 );

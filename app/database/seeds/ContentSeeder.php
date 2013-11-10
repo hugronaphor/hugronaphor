@@ -61,6 +61,17 @@ class ContentSeeder extends Seeder {
         'user_id' => 1,
       ));
     }
+    Variable::create(array(
+      'name' => 'site_name',
+      'value' => 'Youngers',
+    ));
+
+    Variable::create(array(
+      'name' => 'footer_contact_text',
+      'value' => '<p>tel and stuff</p><p>Lorem Ipsum is not simply random text.</p><p>Lorem Ipsum is not simply random text.</p><p>Lorem Ipsum is not simply random text.</p>',
+    ));
+
+
   }
 
 }

@@ -11,15 +11,35 @@
   |
  */
 
-Route::get('admin/logout', array('as' => 'admin.logout', 'uses' => 'App\Controllers\Admin\AuthController@getLogout'));
-Route::get('admin/login', array('as' => 'admin.login', 'uses' => 'App\Controllers\Admin\AuthController@getLogin'));
-Route::post('admin/login', array('as' => 'admin.login.post', 'uses' => 'App\Controllers\Admin\AuthController@postLogin'));
+Route::get('admin/logout', array(
+  'as' => 'admin.logout',
+  'uses' => 'App\Controllers\Admin\AuthController@getLogout'
+));
 
-Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function() {
-  
-    Route::any('/', 'App\Controllers\Admin\PagesController@index');
-    Route::resource('articles', 'App\Controllers\Admin\ArticlesController');
-    Route::resource('profiles', 'App\Controllers\Admin\ProfilesController');
-    Route::resource('pages', 'App\Controllers\Admin\PagesController');
-    
-  });
+Route::get('admin/login', array(
+  'as' => 'admin.login',
+  'uses' => 'App\Controllers\Admin\AuthController@getLogin'
+));
+
+Route::post('admin/login', array(
+  'as' => 'admin.login.post',
+  'uses' => 'App\Controllers\Admin\AuthController@postLogin'
+));
+
+Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function () {
+
+  Route::any('/', 'App\Controllers\Admin\PagesController@index');
+  Route::resource('articles', 'App\Controllers\Admin\ArticlesController');
+  Route::resource('profiles', 'App\Controllers\Admin\ProfilesController');
+  Route::resource('pages', 'App\Controllers\Admin\PagesController');
+
+  Route::resource('config', 'App\Controllers\Admin\ConfigController');
+
+});
+
+
+// Site Routes
+Route::get('contact', array(
+  'as' => 'contact',
+  'uses' => 'GeneralController@getContact'
+));
