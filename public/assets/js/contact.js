@@ -189,7 +189,7 @@ $(function() {
         },
         31: {
             "x": 47,
-            "y": 65,
+            "y": 67,
             "interval": 100,
             "text": '<span class="pink-point">.</span><span class="here-top">WILL BE HERE</span>',
         }
