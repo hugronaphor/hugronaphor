@@ -24,7 +24,7 @@ class CreateVariablesTable extends Migration {
    * @return void
    */
   public function down() {
-    Schema::drop('profiles');
+    Schema::drop('variables');
   }
 
 }

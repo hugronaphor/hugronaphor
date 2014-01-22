@@ -28,6 +28,9 @@ return array(
 
 	'public' => __DIR__.'/../public',
 
+  // For hosting web root trick.
+  // 'public' => __DIR__.'/../../public_html',
+
 	/*
 	|--------------------------------------------------------------------------
 	| Base Path

@@ -124,7 +124,7 @@ class Image {
 
   /**
    * Upload an image to the public storage
-   * @param  File $file
+   * @param  file $file
    * @return string
    */
   public function upload($file, $dir = null) {

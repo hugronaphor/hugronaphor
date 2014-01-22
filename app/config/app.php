@@ -168,8 +168,9 @@ return array(
     
     'Article' => 'App\Models\Article',
     'Page' => 'App\Models\Page',
-    'Profile' => 'App\Models\Profile',
     'Variable' => 'App\Models\Variable',
+    'File' => 'App\Models\File',
+    'Video' => 'App\Models\Video',
     
   ),
 );

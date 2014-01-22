@@ -3,7 +3,7 @@
 @section('main')
 
 <h1>
-  Pages <a href="{{ URL::route('admin.pages.create') }}" class="btn btn-success"><i class="icon-plus-sign"></i> Add new page</a>
+  General site configuration
 </h1>
 
 <hr>
