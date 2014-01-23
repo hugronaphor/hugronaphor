@@ -1,22 +1,34 @@
 $(function() {
-  //$("body").css("overflow", "hidden");
-  var headerHeight = $('.header').height();
-  $(window).load(function() {
-    setBlocksHeight('.art .page-block');
-  });
+  // Base top fixed menu.
+  function UpdateOnScroll() {
+    $(".page").each(function () {
 
-  $(window).resize(function() {
-    setBlocksHeight('.art .page-block');
-  });
+      var el = $(this),
+        offset = el.offset(),
+        scrollTop = $(window).scrollTop(),
+        floatingHeader = $(".floatingHeader", this);
 
-  // Menu navigation.
-  $('.art .nav-level-2 a').click(function() {
-    var pageId = $(this).attr('rel');
-    var page = $('#' + pageId);
-    $('.art .nav-level-2 a').removeClass('active');
-    $(this).addClass('active');
-    $("html, body").animate({scrollTop: page.offset().top - headerHeight}, 500);
-    return false;
+      if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+        floatingHeader.css({
+          "visibility": "visible"
+        });
+      } else {
+        floatingHeader.css({
+          "visibility": "hidden"
+        });
+      }
+      ;
+    });
+  }
+
+  var clonedHeaderRow;
+
+  $(".page").each(function () {
+    clonedHeaderRow = $(".base-header", this);
+    clonedHeaderRow
+      .before(clonedHeaderRow.clone())
+      //.css("width", clonedHeaderRow.width())
+      .addClass("floatingHeader");
   });
 
   // Initial build of all images.

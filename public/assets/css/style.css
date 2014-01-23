@@ -35,8 +35,9 @@ a {
 a:visited {
     color: inherit;
 }
+
 a:link {
-    color:#fff;
+    color: #fff;
 }
 
 html, body {
@@ -529,42 +530,6 @@ body {
 
 /*END Contact Animation*/
 
-/*START Art animation*/
-.art .content {
-    position: relative;
-    margin: 200px 20px 0;
-}
-
-.art .header {
-    width: 100%;
-    /*height: 200px;*/
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-}
-
-.art .art-animation {
-    border: 1px solid #d55b5b;
-    min-height: 750px;
-    width: 70%;
-    margin: 0 auto;
-    position: relative;
-    display: none;
-}
-
-.art .page-block {
-    border: 1px solid grey;
-}
-
-.art-animation img {
-    position: absolute;
-    width: 100%;
-}
-
-/*------------------*/
-
-/*END Art animation*/
-
 /* Home page */
 .home {
     text-align: center;
@@ -939,7 +904,7 @@ p.about-facts-title {
 
 /*Web Page*/
 
-.web {
+.web, .art {
     background: rgb(255, 255, 255);
     text-align: center;
 }
@@ -1047,18 +1012,19 @@ p.about-facts-title {
 .page.movie {
     background: rgb(255, 255, 255);
 }
+
 .movie .content {
     width: 900px;
     margin: 0 auto;
 }
 
 .movie-thumbs-wrapper {
-    margin:50px 0;
+    margin: 50px 0;
 }
 
-.movie-thumbs-wrapper  a:visited,
-.movie-thumbs-wrapper  a:link{
-    color:#fff;
+.movie-thumbs-wrapper a:visited,
+.movie-thumbs-wrapper a:link {
+    color: #fff;
 }
 
 .video-thumb-box {
@@ -1110,8 +1076,8 @@ p.about-facts-title {
 
 .video-thumb-box .credentials {
     position: absolute;
-    left:10px;
-    bottom:10px;
+    left: 10px;
+    bottom: 10px;
 }
 
 .video-thumb-box .current-thumb-overlay {
@@ -1132,6 +1098,7 @@ p.about-facts-title {
     padding-top: 25px;
     height: 0;
 }
+
 .movie-current-wrapper iframe {
     position: absolute;
     top: 0;
@@ -1151,6 +1118,7 @@ p.about-facts-title {
     list-style-type: none;
     list-style-image: none;
 }
+
 .movie .pagination ul li {
     overflow: hidden;
     display: inline;
@@ -1163,19 +1131,125 @@ p.about-facts-title {
     background: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*End Movies Page*/
+
+/*Art Page*/
+
+/*START Art animation*/
+.art .content {
+    position: relative;
+    /*top:200px;*/
+}
+
+.art .art-animation {
+    border: 1px solid #d55b5b;
+    min-height: 750px;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+}
+
+.art-animation img {
+    position: absolute;
+    width: 100%;
+}
+
+/*------------------*/
+
+/*END Art animation*/
+.art .footer {
+    /*temporary*/
+    z-index: 1;
+}
+
+.art-first-section {
+    width: 80%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.art-block-1 {
+    padding: 3px 7px;
+    background: rgb(221, 133, 181);
+    color: rgb(255, 255, 255);
+    left: 1%;
+    margin: 100px 0 0;
+    font-size: 50px;
+    float: left;
+    position: relative;
+}
+
+.art-block-2 {
+    padding: 3px 7px;
+    background: rgba(0, 0, 0, 0);
+    color: inherit;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: left;
+    width: 527px;
+}
+
+.art-block-3 {
+    padding: 3px 7px;
+    background: #f2f2f2;
+    color: #dd85b5;
+    left: 20%;
+    margin: 80px 0 0;
+    font-size: 50px;
+    float: left;
+    position: relative;
+}
+
+.art-block-4 {
+    /*width: 50%;*/
+    padding: 3px 7px;
+    background: transparent;
+    color: inherit;
+    left: 15%;
+    margin: 80px 0 0;
+    font-size: 20px;
+    float: left;
+    position: relative;text-align: left;
+}
+.art-block-4 span {
+    color: #dd85b5;
+}
+.art-block-5 ul {
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.art-block-5 ul li {
+    display: inline-block;
+    padding: 10px;
+    width: 20%;
+}
+
+.art-block-6 {
+    margin-top: 80px;
+    width: 100%;
+    height: 300px;
+    background: #283744;
+}
+
+.art-block-7 {
+    margin-top: 80px;
+    width: 100%;
+    height: 300px;
+    background: #343434;
+}
+
+
+
+
+/*End art page*/
+
+
+
 
 
 
@@ -1378,6 +1452,7 @@ p.about-facts-title {
     .movie .content {
         width: 300px;
     }
+
     .video-thumb-box {
         width: 150px;
         height: 150px;
@@ -1425,6 +1500,7 @@ p.about-facts-title {
     .movie .content {
         width: 680px;
     }
+
     .video-thumb-box {
         width: 226px;
         height: 226px;
@@ -1436,6 +1512,7 @@ p.about-facts-title {
     .movie .content {
         width: 1050px;
     }
+
     .video-thumb-box {
         width: 350px;
         height: 350px;
