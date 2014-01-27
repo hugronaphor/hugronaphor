@@ -43,7 +43,7 @@
   <div id="pager" class="pager"></div>
 </div>
 <div class="art-block-7" id="art-how-we-work">
-<!--  <div class="art-animation"></div>-->
+  <div class="art-animation"></div>
 </div>
 
 

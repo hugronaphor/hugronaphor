@@ -118,7 +118,7 @@ body {
 /* Try to do transition effect. */
 .base-navigation ul li {
     overflow: hidden;
-    / / height : 1 em;
+     /*height : 1 em;*/
 }
 
 .nav-wrapper .nav-level-2 ul li a {
@@ -762,7 +762,7 @@ p.about-facts-title {
 
 .video-our-culture {
     height: 260px;
-    background: url("../img/base/book.jpg") no-repeat center;
+    background: url("../img/base/book.jpg") no-repeat bottom fixed;
     font-size: 30px;
 }
 
@@ -887,7 +887,7 @@ p.about-facts-title {
     background: #87d7a0;
     padding: 3px 0px;
     cursor: pointer;
-    / / margin : 5 px 0;
+    /*margin : 5 px 0;*/
     /*height: 60px;*/
     float: left;
     border: 10px solid #fff;
@@ -1103,12 +1103,13 @@ p.about-facts-title {
     width: 70%;
     margin: 0 auto;
     position: relative;
-    display: none;
+    /*display: none;*/
 }
 
 .art-animation img {
     position: absolute;
-    width: 100%;
+left: 0;
+    /*width: 100%;*/
 }
 
 /*------------------*/
@@ -1206,9 +1207,7 @@ vertical-align: top;
 
 .art-block-7 {
     margin-top: 80px;
-    width: 100%;
-    height: 300px;
-    background: #343434;
+width: 100%;
 }
 .art .base-header {
     position: fixed;
