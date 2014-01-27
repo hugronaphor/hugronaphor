@@ -118,7 +118,7 @@ body {
 /* Try to do transition effect. */
 .base-navigation ul li {
     overflow: hidden;
-/ / height : 1 em;
+    / / height : 1 em;
 }
 
 .nav-wrapper .nav-level-2 ul li a {
@@ -446,6 +446,7 @@ body {
     margin: 0;
     font-size: 1px;
     line-height: 0;
+    float: none;
 }
 
 .hide {
@@ -481,52 +482,7 @@ body {
 
 /*}*/
 
-/*START Lazy animation*/
-.lazy-animation-nav {
-    position: absolute;
-    top: 40%;
-    right: 15px;
-    display: block;
-}
 
-.lazy-animation-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-image: none;
-}
-
-.lazy-animation-nav ul li {
-    border: 1px solid grey;
-    padding: 1px;
-    margin: 6px 0;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-}
-
-.lazy-animation-nav ul li span {
-    background: #fff;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    display: block;
-    padding: 6px;
-}
-
-.lazy-animation-nav ul li:hover span,
-.lazy-animation-nav ul li.active span {
-    background: #d68caf;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    display: block;
-    padding: 6px;
-}
-
-.lazy-animation-nav ul li:hover {
-    cursor: pointer;
-}
 
 /*END Contact Animation*/
 
@@ -931,7 +887,7 @@ p.about-facts-title {
     background: #87d7a0;
     padding: 3px 0px;
     cursor: pointer;
-/ / margin : 5 px 0;
+    / / margin : 5 px 0;
     /*height: 60px;*/
     float: left;
     border: 10px solid #fff;
@@ -1170,7 +1126,7 @@ p.about-facts-title {
 }
 
 .art-block-1 {
-    padding: 3px 7px;
+    padding: 3px 20px;
     background: rgb(221, 133, 181);
     color: rgb(255, 255, 255);
     left: 1%;
@@ -1219,21 +1175,33 @@ p.about-facts-title {
     padding: 0;
     list-style-type: none;
     list-style-image: none;
-    margin: 0 auto;
+    margin: 20px auto 0;
     width: 100%;
+    font-size: 16px;
 }
 
 .art-block-5 ul li {
-    display: inline-block;
     padding: 10px;
-    width: 20%;
+width: 145px;
+margin: 0 4.7%;
+display: inline-block;
+list-style-type: none;
+vertical-align: top;
+}
+.art-block-5 ul li div,
+.art-block-5 ul li p { 
+    /*display: inline-block;*/
+    /*float:left;*/
+}
+.art-block-5 ul li p {    
+    margin: 12px 0 0;
 }
 
 .art-block-6 {
     margin-top: 80px;
     width: 100%;
-    height: 300px;
-    background: #283744;
+    /*height: 300px;*/
+    /*background: #283744;*/
 }
 
 .art-block-7 {
@@ -1242,6 +1210,198 @@ p.about-facts-title {
     height: 300px;
     background: #343434;
 }
+.art .base-header {
+    position: fixed;
+    width: 100%;
+    top:0;
+}
+.no-visible {
+    visibility: hidden;
+}
+.art .content {
+    /*top:100px;*/
+    z-index: 2;
+}
+
+.art-block-5 ul li a {
+    text-decoration: none;
+    margin: 4px;
+    /*padding: 5px 20px 5px 20px;*/
+    color: #85848a;
+    background: none;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    /*float: left;*/
+}
+
+.art-block-5 li div:first-child {
+    /*    -webkit-transition: background 0.2s ease-out;
+        -moz-transition: background 0.2s ease-out;
+        -o-transition: background 0.2s ease-out;
+        transition: background 0.2s ease-out;*/
+    cursor: pointer;
+    height: 81px;
+}
+
+.art-block-5 li[rel="interface"] div:first-child {
+    background: url("../img/icons/art_icons.png") bottom left;
+}
+
+.art-block-5 li[rel="interface"] div:first-child:hover,
+.art-block-5 li[rel="interface"] div:first-child:focus{
+    background: url("../img/icons/art_icons.png") top left;
+}
+
+.art-block-5 li[rel="brand"] div:first-child {
+    background: url("../img/icons/art_icons.png") -125px 81px;
+}
+
+.art-block-5 li[rel="brand"] div:first-child:hover,
+.art-block-5 li[rel="brand"] div:first-child:focus {
+    background: url("../img/icons/art_icons.png") -125px 0;
+}
+.art-block-5 li[rel="print"] div:first-child {
+    background: url("../img/icons/art_icons.png") -251px -81px;
+}
+
+.art-block-5 li[rel="print"] div:first-child:hover,
+.art-block-5 li[rel="print"] div:first-child:focus {
+    background: url("../img/icons/art_icons.png") -251px 0;
+}
+.art-block-5 li[rel="communication"] div:first-child {
+    background: url("../img/icons/art_icons.png") bottom right;
+}
+
+.art-block-5 li[rel="communication"] div:first-child:hover,
+.art-block-5 li[rel="communication"] div:first-child:focus {
+    background: url("../img/icons/art_icons.png") top right;
+}
+
+.art-block-5 ul li a:hover,
+.art-block-5 ul li a:focus,
+.art-block-5 ul li a.active {
+    color: #d68caf;
+}
+
+/*Slider*/
+
+#art-carousel img {
+    display: block;
+    clear: both;
+    width: 100%;
+
+}
+
+
+.list_carousel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+.list_carousel li {
+    color: #999;
+    text-align: center;
+    /*width: 50px;*/
+    /*height: 50px;*/
+    padding: 0;
+    margin: 0;
+    display: block;
+    float: left;
+}
+.list_carousel.responsive {
+    width: auto;
+    margin-left: 0;
+}
+.clearfix {
+    float: none;
+    clear: both;
+}
+.prev {
+    float: left;
+    margin-left: 10px;
+}
+.next {
+    float: right;
+    margin-right: 10px;
+}
+.art-block-6 .pager {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+.art-block-6 .pager a {
+    border: 1px solid grey;
+    padding: 1px;
+    margin: 6px 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+.art-block-6 .pager a span {
+background: rgb(255, 255, 255);
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+display: block;
+padding: 4px;
+width: 9px;
+}
+
+.pager a.selected span {
+    background: #d68caf;
+}
+
+
+
+/*.art-block-5 .pager {
+    position: absolute;
+    top: 40%;
+    right: 15px;
+    display: block;
+}
+
+.art-block-5 .pager ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.art-block-5 .pager ul li {
+    border: 1px solid grey;
+    padding: 1px;
+    margin: 6px 0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.art-block-5 .pager ul li span {
+    background: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: block;
+    padding: 6px;
+}
+
+.art-block-5 .pager ul li:hover span,
+.art-block-5 .pager ul li.active span {
+    background: #d68caf;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: block;
+    padding: 6px;
+}
+
+.art-block-5 .pager ul li:hover {
+    cursor: pointer;
+}*/
 
 
 

@@ -18,23 +18,37 @@
     <p>based on project goals, usability and the user experience.</p>
   </div>
   <div class="brclear"></div>
-  <div class="art-block-5">
+  
+</div>
+
+<div class="art-block-5">
     <ul>
-      <li><img src="" /><p>Interface Design</p></li>
-      <li><img src="" /><p>Branding and Identity</p></li>
-      <li><img src="" /><p>Print design and Production</p></li>
-      <li><img src="" /><p>Developing Promo and Communication strategies</p></li>
+      <li rel="interface"><div></div><p>Interface Design</p></li>
+      <li rel="brand"><div></div><p>Branding and Identity</p></li>
+      <li rel="print"><div></div><p>Print design and Production</p></li>
+      <li rel="communication"><div></div><p>Developing Promo and Communication strategies</p></li>
     </ul>
   </div>
-  <div class="brclear"></div>
+<div class="art-block-6 list_carousel responsive">
+    
+    
+    
+    <ul id="art-carousel">
+        <li><img src="http://lorempixel.com/350/230/" /><img src="http://lorempixel.com/350/230/" /></li>
+        <li><img src="http://lorempixel.com/350/230/" /><img src="http://lorempixel.com/350/230/" /></li><li><img src="http://lorempixel.com/350/230/" /><img src="http://lorempixel.com/350/230/" /></li><li><img src="http://lorempixel.com/350/230/" /><img src="http://lorempixel.com/350/230/" /></li><li><img src="http://lorempixel.com/350/230/" /><img src="http://lorempixel.com/350/230/" /></li><li><img src="http://lorempixel.com/350/230/" /><img src="http://lorempixel.com/350/230/" /></li><li><img src="http://lorempixel.com/350/230/" /><img src="http://lorempixel.com/350/230/" /></li>
+    </ul>
+  <div class="clearfix"></div>
+<!--  <a id="prev2" class="prev" href="#">&lt;</a>-->
+<!--  <a id="next2" class="next" href="#">&gt;</a>-->
+  <div id="pager" class="pager"></div>
+</div>
+<div class="art-block-7" id="art-how-we-work">
+<!--  <div class="art-animation"></div>-->
 </div>
 
 
-<div class="art-block-6">SLIDER</div>
-<div class="art-block-7">PROCESS</div>
-
-
-{{ HTML::script('assets/js/vendor/modernizr.custom.37797.js'); }}
+{{-- HTML::script('assets/js/vendor/modernizr.custom.37797.js'); --}}
+{{ HTML::script('assets/js/vendor/carouFredSel-6.2.1/jquery.carouFredSel-6.2.1.js'); }}
 {{ HTML::script('assets/js/art.js'); }}
 
 
