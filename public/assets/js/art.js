@@ -3,35 +3,31 @@ $(function() {
     $(window).load(function() {
         //	Responsive layout, resizing the items
         $('#art-carousel').carouFredSel({
-            circular: true, // Determines whether the carousel should be circular.
-            infinite: true,
+//            circular: true, // Determines whether the carousel should be circular.
+//            infinite: true,
             auto: false,
 //    prev: '#prev2',
 //    next: '#next2',
             pagination: "#pager",
             responsive: true,
             width: '100%',
-            height: "auto",
             scroll: 2,
+            height: 'variable',
             items: {
                 width: 350,
-//      	height: 100,	//	optionally resize item-height
+                height: 'variable',
                 visible: {
                     min: 2,
                     max: 4
                 }
             },
-            //mousewheel: true,
             swipe: {
-                onMouse: true,
                 onTouch: true
             }
-
-
         });
     });
 
-// Create base header clone.
+    // Create base header clone.
     var clonedHeaderRow = $(".base-header", this);
     $(".content").prepend(clonedHeaderRow.clone().removeClass('base-header'));
 

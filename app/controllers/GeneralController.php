@@ -69,7 +69,7 @@ class GeneralController extends BaseController {
 //dd($movies);
         $new_movies = array();
         foreach ($movies as $key => $movie) {
-            $new_movies[$key]['thumbnail'] = $movie->path;
+            $new_movies[$key]['thumbnail'] = !empty($movie->path) ? $movie->path : '/uploads/no-image.jpg';
             $new_movies[$key]['title'] = $movie->title;
             $new_movies[$key]['author'] = $movie->author;
             $new_movies[$key]['year'] = $movie->year;

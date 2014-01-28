@@ -10,7 +10,7 @@
   @foreach ($vars["movies"] as $key => $item)
   <a class="video-thumb-box" rel="{{$item['title']}}" href="{{ URL::route('movie', $key) }}">
 
-    <img src="{{$item['thumbnail']}}"/>
+      <img src="{{$item['thumbnail']}}"/>
 
     <div class="thumb-overlay">
       <div class="title">{{$item['title']}}</div>

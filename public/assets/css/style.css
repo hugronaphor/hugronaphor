@@ -118,7 +118,7 @@ body {
 /* Try to do transition effect. */
 .base-navigation ul li {
     overflow: hidden;
-     /*height : 1 em;*/
+    /*height : 1 em;*/
 }
 
 .nav-wrapper .nav-level-2 ul li a {
@@ -970,7 +970,7 @@ p.about-facts-title {
 }
 
 .movie .content {
-    width: 900px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -984,15 +984,22 @@ p.about-facts-title {
 }
 
 .video-thumb-box {
-    width: 300px;
-    height: 300px;
     position: relative;
     display: block;
     float: left;
     color: #fff;
+    width: 33.33%
 }
 
-.video-thumb-box img,
+.video-thumb-box img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    max-width: 100%;
+}
 .video-thumb-box div.thumb-overlay {
     width: 100%;
     height: 100%;
@@ -1038,11 +1045,14 @@ p.about-facts-title {
 
 .video-thumb-box .current-thumb-overlay {
     width: 100%;
-    height: 50px;
-    margin: 0 auto;
-    position: relative;
-    top: 50%;
-    margin-top: -25px;
+    height: 50%;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    bottom: 0;
+    right: 0;
     z-index: 1;
     text-align: center;
 }
@@ -1108,7 +1118,7 @@ p.about-facts-title {
 
 .art-animation img {
     position: absolute;
-left: 0;
+    left: 0;
     /*width: 100%;*/
 }
 
@@ -1183,11 +1193,11 @@ left: 0;
 
 .art-block-5 ul li {
     padding: 10px;
-width: 145px;
-margin: 0 4.7%;
-display: inline-block;
-list-style-type: none;
-vertical-align: top;
+    width: 145px;
+    margin: 0 4.7%;
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: top;
 }
 .art-block-5 ul li div,
 .art-block-5 ul li p { 
@@ -1207,7 +1217,7 @@ vertical-align: top;
 
 .art-block-7 {
     margin-top: 80px;
-width: 100%;
+    width: 100%;
 }
 .art .base-header {
     position: fixed;
@@ -1326,9 +1336,8 @@ width: 100%;
     margin-right: 10px;
 }
 .art-block-6 .pager {
-    width: 300px;
     text-align: center;
-    margin: 0 auto;
+    margin: 30px auto 0;
 }
 .art-block-6 .pager a {
     border: 1px solid grey;
@@ -1341,66 +1350,67 @@ width: 100%;
     display: inline-block;
 }
 .art-block-6 .pager a span {
-background: rgb(255, 255, 255);
--webkit-border-radius: 6px;
--moz-border-radius: 6px;
-border-radius: 6px;
-display: block;
-padding: 4px;
-width: 9px;
+    background: rgb(255, 255, 255);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: block;
+    padding: 4px;
+    width: 9px;
 }
 
 .pager a.selected span {
     background: #d68caf;
 }
 
+#art-carousel li div.slider-block{
+    position: relative;
+    /*    width:350px;
+        height: 200px;*/
+    color:#fff;
+}
 
-
-/*.art-block-5 .pager {
+#art-carousel img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    max-width: 100%;
+}
+#art-carousel .thumb-overlay {
+    width:100%;
+    height: 100%;
     position: absolute;
-    top: 40%;
-    right: 15px;
+    top: 0;
+    left: 0;
     display: block;
 }
 
-.art-block-5 .pager ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    list-style-image: none;
+
+#art-carousel .thumb-overlay {
+    z-index: 0;
+    background: rgba(214, 140, 175, 0.9);
+}
+#art-carousel img {
+    z-index: 1;
+}
+#art-carousel div.slider-block:hover div.thumb-overlay,
+#art-carousel div.slider-block:focus div.thumb-overlay{
+    z-index: 1;
 }
 
-.art-block-5 .pager ul li {
-    border: 1px solid grey;
-    padding: 1px;
-    margin: 6px 0;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
+#art-carousel .thumb-overlay .wrapper {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top: 20%; left: 0; bottom: 0; right: 0;
 }
 
-.art-block-5 .pager ul li span {
-    background: #fff;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    display: block;
-    padding: 6px;
-}
 
-.art-block-5 .pager ul li:hover span,
-.art-block-5 .pager ul li.active span {
-    background: #d68caf;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    display: block;
-    padding: 6px;
-}
-
-.art-block-5 .pager ul li:hover {
-    cursor: pointer;
-}*/
 
 
 
@@ -1609,13 +1619,12 @@ width: 9px;
     }
 
     .movie .content {
-        width: 300px;
+        width: 95%;
+    }
+    .movie .video-thumb-box {
+        width: 50%;
     }
 
-    .video-thumb-box {
-        width: 150px;
-        height: 150px;
-    }
 
 }
 
@@ -1656,24 +1665,9 @@ width: 9px;
         width: 66.66%;
     }
 
-    .movie .content {
-        width: 680px;
-    }
-
-    .video-thumb-box {
-        width: 226px;
-        height: 226px;
-    }
 }
 
 /*Large desktop*/
 @media only screen and (min-width: 1024px) {
-    .movie .content {
-        width: 1050px;
-    }
 
-    .video-thumb-box {
-        width: 350px;
-        height: 350px;
-    }
 }
