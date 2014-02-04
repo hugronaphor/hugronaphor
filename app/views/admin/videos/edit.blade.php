@@ -2,7 +2,7 @@
 
 @section('main')
 
-<h2>Edit video</h2>
+<h2>Edit video <i>{{ $row->title }}</i></h2>
 
 @include('admin._partials.notifications')
 
@@ -13,11 +13,21 @@
   <div class="controls">
     {{ Form::text('title') }}
   </div>
+  <div class="form-group">
     {{ Form::label('url', 'Video Url') }}
-  <div class="controls">
-    {{ Form::text('url') }}
+    <div class="controls">
+      {{ Form::text('url') }}
+    </div>
+    {{ Form::label('width', 'Video Width') }}
+    <div class="controls">
+      {{ Form::text('width', $row->width, array('placeholder'=>'Video width, used for calculating video ratio  (default:500).')) }}
+    </div>
+    {{ Form::label('height', 'Video Height') }}
+    <div class="controls">
+      {{ Form::text('height', $row->height, array('placeholder'=>'Video height, used for calculating video ratio  (default:203).')) }}
+    </div>
   </div>
-      {{ Form::label('author', 'Author') }}
+  {{ Form::label('author', 'Author') }}
   <div class="controls">
     {{ Form::text('author') }}
   </div>
@@ -40,27 +50,30 @@
   <div class="fileupload fileupload-new" data-provides="fileupload">
     <div class="fileupload-preview thumbnail" style="width: 300px; height: 300px;">
       @if ($row->image)
-      <a href="<?php echo $row->image; ?>"><img src="<?php echo Image::resize($row->image, 300, 300); ?>" alt=""></a>
+      {{-- dd($row); --}}
+      <a href="<?php echo $row->path; ?>"><img src="<?php echo /* Image::resize($row->path, 300, 300); */ $row->path; ?>" alt=""></a>
       @else
       <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image">
       @endif
     </div>
     <div>
       <span class="btn btn-file">
-        <span class="fileupload-new">Select image</span>
+        <span class="fileupload-new">Select image /</span>
         <span class="fileupload-exists">Change</span>
         <p>{{ Form::file('image') }}</p>
       </span>
-      <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+      <!--<a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>-->
     </div>
   </div>
 </div>
 
-<div class="form-actions">
-  {{ Form::submit('Save', array('class' => 'btn btn-success btn-save btn-large')) }}
-  <a href="{{ URL::route('admin.videos.index') }}" class="btn btn-large">Cancel</a>
+<div class="form-actions edit-node-buttons">
+  {{ Form::submit('Save', array('class' => 'btn btn-success btn-save save-node-btn btn-large')) }}
+  <a href="{{ URL::route('admin.videos.index') }}" class="btn btn-large cancel-node-btn">Cancel</a>
+  {{ Form::close() }}
+
+  {{ Form::open(array('route' => array('admin.videos.destroy', $row->vid), 'method' => 'delete', 'data-confirm' => 'Are you sure?')) }}
+  <button type="submit" href="{{ URL::route('admin.videos.destroy', $row->vid) }}" class="btn btn-danger btn-large delete-node-btn">Delete</button>
+  {{ Form::close() }}
 </div>
-
-{{ Form::close() }}
-
 @stop

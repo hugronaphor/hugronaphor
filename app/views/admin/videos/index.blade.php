@@ -29,11 +29,13 @@
       <td><a href="{{ URL::route('admin.videos.show', $row->vid) }}">{{ $row->year }}</a></td>
       <td>{{ $row->created_at }}</td>
       <td>
-        <a href="{{ URL::route('admin.videos.edit', $row->vid) }}" class="btn btn-success btn-mini pull-left">Edit</a>
+        <div class="mini-edit-node-buttons">
+          <a href="{{ URL::route('admin.videos.edit', $row->vid) }}" class="btn btn-success btn-mini pull-left">Edit</a>
 
-        {{ Form::open(array('route' => array('admin.videos.destroy', $row->vid), 'method' => 'delete', 'data-confirm' => 'Are you sure?')) }}
-        <button type="submit" href="{{ URL::route('admin.videos.destroy', $row->vid) }}" class="btn btn-danger btn-mini">Delete</button>
+          {{ Form::open(array('route' => array('admin.videos.destroy', $row->vid), 'method' => 'delete', 'data-confirm' => 'Are you sure?')) }}
+          <button type="submit" href="{{ URL::route('admin.videos.destroy', $row->vid) }}" class="btn btn-danger btn-mini">Delete</button>
           {{ Form::close() }}
+        </div>
       </td>
     </tr>
     @endforeach

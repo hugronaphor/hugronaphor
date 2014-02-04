@@ -10,7 +10,8 @@ use Image,
     Notification,
     Redirect,
     Sentry,
-    Str;
+    Str,
+    Illuminate\Support\Facades\DB;
 
 class VideosController extends \BaseController {
 
@@ -47,15 +48,28 @@ class VideosController extends \BaseController {
 //      }
 //
 //      Notification::success('The video was saved.');
-
 //      return Redirect::route('admin.videos.edit', $row->id);
 //    }
-
     //return Redirect::back()->withInput()->withErrors($validation->errors);
   }
 
   public function edit($id) {
-    return \View::make('admin.videos.edit')->with('row', Video::find($id));
+
+    $row = DB::table('video')
+      ->leftJoin('files', 'video.image', '=', 'files.fid')
+      ->where('video.vid', '=', $id)
+      ->get();
+
+    $row = @reset($row);
+    if (!empty($row)) {
+      
+      $row->width = $row->width ? $row->width : '';
+      $row->height = $row->height ? $row->height : '';
+      
+      return \View::make('admin.videos.edit')->with('row', $row);
+    }
+
+    return 'Something is wrong.';
   }
 
   public function update($id) {
@@ -65,11 +79,22 @@ class VideosController extends \BaseController {
       $row = Video::find($id);
       $row->title = Input::get('title');
       $row->url = Input::get('url');
+      $row->width = Input::get('width');
+      $row->height = Input::get('height');
       //$for_slug = $row->f_name . ' ' . $row->m_name . ' ' . $row->l_name;
       $row->slug = Str::slug($row->title);
       $row->body = Input::get('body');
       //$row->user_id = Sentry::getUser()->id;
-      if (Input::hasFile('image')){
+
+      if (Input::hasFile('image')) {
+        // First - delete old one.
+        if (isset($row->image) && $row->image != '0') {
+          if (!$file_deleted = Files::deleteFile($row->image)) {
+            Notification::success('The old File can\'t be deleted.');
+            return Redirect::route('admin.videos.edit', $row->vid);
+          }
+        }
+
         $row->image = Files::createFile(Input::file('image'), 'videos/' . $row->vid, 'image');
       }
       $row->save();
@@ -84,10 +109,15 @@ class VideosController extends \BaseController {
 
   public function destroy($id) {
     $row = Video::find($id);
+
+    if (isset($row->image) && $row->image != '0') {
+      if (!$file_deleted = Files::deleteFile($row->image)) {
+        Notification::success('The File can\'t be deleted.');
+        return Redirect::route('admin.videos.edit', $row->vid);
+      }
+    }
     $row->delete();
-
     Notification::success('The Video was deleted.');
-
     return Redirect::route('admin.videos.index');
   }
 

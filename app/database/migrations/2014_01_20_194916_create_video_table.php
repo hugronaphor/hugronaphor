@@ -21,6 +21,8 @@ class CreateVideoTable extends Migration {
       $table->string('year');
       $table->integer('image');
       //$table->integer('user_id');
+      $table->integer('width');
+      $table->integer('height');
       $table->string('slug');
       $table->timestamps();
     });

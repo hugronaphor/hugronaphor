@@ -3,47 +3,47 @@
 table .btn { margin-right: 4px; }*/
 
 .admin table {
-  margin: 0;
-  padding: 0;
-  background: #fff;
+    margin: 0;
+    padding: 0;
+    background: #fff;
 }
 
 .admin textarea,
 .admin input[type="text"]{
-  width: 90%;
-/*  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;*/
+    width: 90%;
+    /*  box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;*/
 }
 
 div {
-  
+
 }
 
 body {
-  font-family: "Lato", Calibri, Arial, sans-serif;
-  background: #f0f0f0 url(../img/bgnoise_lg.jpg);
-  font-weight: 300;
-  font-size: 15px;
-  color: #333;
-  -webkit-font-smoothing: antialiased;
-  overflow-y: scroll;
-  overflow-x: hidden;
+    font-family: "Lato", Calibri, Arial, sans-serif;
+    background: #f0f0f0 url(../img/bgnoise_lg.jpg);
+    font-weight: 300;
+    font-size: 15px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .admin.main-wrapper {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  top:10px;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    top:10px;
 
 }
 .admin .admin-slogan {
-  margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .admin .top-header {
-  border-bottom: 2px #8c1515 solid;
+    border-bottom: 2px #8c1515 solid;
 }
 
 .admin .top-header a:link {text-decoration:none;}
@@ -52,19 +52,33 @@ body {
 .admin .top-header a:active {text-decoration:none;}
 
 .admin .admin-slogan .admin-logo{
-  margin: 0 10px 0 0;
+    margin: 0 10px 0 0;
 }
 
 .admin .admin-slogan .admin-slogan{
-  color: #343434;
-  font-weight: normal;
-  font-family: 'Ultra', sans-serif;   
-  font-size: 30px;
-  top: 6px;
-  position: relative;
-  text-shadow: 0 2px transparent, 0 3px #c6c6c6;
+    color: #343434;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;   
+    font-size: 30px;
+    top: 6px;
+    position: relative;
+    text-shadow: 0 2px transparent, 0 3px #c6c6c6;
 }
 .admin .admin-slogan .admin-slogan:hover{
-  color: #369737;
-  text-shadow: 0 2px transparent, 0 3px #c9c9c9;
+    color: #369737;
+    text-shadow: 0 2px transparent, 0 3px #c9c9c9;
+}
+.edit-node-buttons .save-node-btn,
+.edit-node-buttons .cancel-node-btn {
+    float:left;
+}
+.edit-node-buttons .save-node-btn {
+    margin-right: 10px;
+}
+.edit-node-buttons .delete-node-btn {
+    float:right;
+
+}
+.mini-edit-node-buttons .btn-success {
+    margin-right: 5px;
 }

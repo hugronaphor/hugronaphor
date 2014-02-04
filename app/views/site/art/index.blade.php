@@ -38,7 +38,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -47,7 +47,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -58,7 +58,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -67,27 +67,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
-                      <p>CARMEL IUDICA</p>
-                      <p>logo</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="slider-block">
-                <img src="/uploads/test.jpg"/>
-                <div class="thumb-overlay">
-                    <div class="wrapper">
-                      <p>CARMEL IUDICA</p>
-                      <p>logo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-block">
-                <img src="/uploads/test.jpg"/>
-                <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -98,7 +78,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -107,27 +87,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
-                      <p>CARMEL IUDICA</p>
-                      <p>logo</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="slider-block">
-                <img src="/uploads/test.jpg"/>
-                <div class="thumb-overlay">
-                    <div class="wrapper">
-                      <p>CARMEL IUDICA</p>
-                      <p>logo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-block">
-                <img src="/uploads/test.jpg"/>
-                <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -138,7 +98,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -147,27 +107,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
-                      <p>CARMEL IUDICA</p>
-                      <p>logo</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="slider-block">
-                <img src="/uploads/test.jpg"/>
-                <div class="thumb-overlay">
-                    <div class="wrapper">
-                      <p>CARMEL IUDICA</p>
-                      <p>logo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-block">
-                <img src="/uploads/test.jpg"/>
-                <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -178,7 +118,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -187,7 +127,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -198,7 +138,7 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -207,7 +147,67 @@
             <div class="slider-block">
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
-                    <div class="wrapper">
+                    <div class="wrapper valign">
+                      <p>CARMEL IUDICA</p>
+                      <p>logo</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="slider-block">
+                <img src="/uploads/test.jpg"/>
+                <div class="thumb-overlay">
+                    <div class="wrapper valign">
+                      <p>CARMEL IUDICA</p>
+                      <p>logo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-block">
+                <img src="/uploads/test.jpg"/>
+                <div class="thumb-overlay">
+                    <div class="wrapper valign">
+                      <p>CARMEL IUDICA</p>
+                      <p>logo</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="slider-block">
+                <img src="/uploads/test.jpg"/>
+                <div class="thumb-overlay">
+                    <div class="wrapper valign">
+                      <p>CARMEL IUDICA</p>
+                      <p>logo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-block">
+                <img src="/uploads/test.jpg"/>
+                <div class="thumb-overlay">
+                    <div class="wrapper valign">
+                      <p>CARMEL IUDICA</p>
+                      <p>logo</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="slider-block">
+                <img src="/uploads/test.jpg"/>
+                <div class="thumb-overlay">
+                    <div class="wrapper valign">
+                      <p>CARMEL IUDICA</p>
+                      <p>logo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-block">
+                <img src="/uploads/test.jpg"/>
+                <div class="thumb-overlay">
+                    <div class="wrapper valign">
                       <p>CARMEL IUDICA</p>
                       <p>logo</p>
                     </div>
@@ -224,7 +224,9 @@
     <div id="pager" class="pager"></div>
 </div>
 <div class="art-block-7" id="art-how-we-work">
-    <div class="art-animation"></div>
+    <div class="art-animation"><div class="clearfix"></div></div>
+    <div class="clearfix"></div>
+    <div class="brclear"></div>
 </div>
 
 

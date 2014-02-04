@@ -73,21 +73,21 @@ $(function () {
   // End Base top fixed menu.
 
   // Video logic.
-  $(window).load(function () {
-    // executes when complete page is fully loaded.
-    setHomeVideoWrappHeight();
-  });
-
-  $(window).resize(function () {
-    setHomeVideoWrappHeight();
-  });
+//  $(window).load(function () {
+//    // executes when complete page is fully loaded.
+//    setHomeVideoWrappHeight();
+//  });
+//
+//  $(window).resize(function () {
+//    setHomeVideoWrappHeight();
+//  });
 
   function setHomeVideoWrappHeight() {
     var videoHeight = $('.h-video-wrapp video').height(),
       el1 = $('.h-video-on-video'),
       cultureHeight = $('.video-our-culture').height(),
       el2 = $('.h-culture-centered');
-    el1.css({height: videoHeight, marginTop: -videoHeight -5 });
+    //el1.css({height: videoHeight, marginTop: -videoHeight -5 });
     $('.h-video-centered-content').css({top: videoHeight / 2 - $('.h-video-centered-content').height() / 2});
     el2.css({top: cultureHeight / 2 - el2.height() / 2});
   }
