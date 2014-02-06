@@ -6,8 +6,8 @@ $(function() {
 //            circular: true, // Determines whether the carousel should be circular.
 //            infinite: true,
             auto: false,
-            prev: '#prev',
-            next: '#next',
+//            prev: '#prev',
+//            next: '#next',
             pagination: "#pager",
             responsive: true,
             width: '100%',
@@ -17,8 +17,8 @@ $(function() {
                 width: 350,
                 height: 'variable',
                 visible: {
-                    min: 3,
-                    max: 3
+                    min: 2,
+                    max: 2
                 }
             },
             swipe: {

@@ -48,7 +48,7 @@
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
                     <div class="wrapper valign">
-                      <p>CARMEL IUDICA</p>
+                      <p>Andreev Cornel</p>
                       <p>logo</p>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                 <img src="/uploads/test.jpg"/>
                 <div class="thumb-overlay">
                     <div class="wrapper valign">
-                      <p>CARMEL IUDICA</p>
+                      <p>IGOR VLAS</p>
                       <p>logo</p>
                     </div>
                 </div>
@@ -224,14 +224,15 @@
     <div id="pager" class="pager"></div>
 </div>
 <div class="art-block-7" id="art-how-we-work">
-    <div class="art-animation"><div class="clearfix"></div></div>
+  <img class="art-what-you-like" src="/assets/img/base/art_what_you_like.png" />
+  <div id="art-animation"></div>
+    <img class="art-design-process" src="/assets/img/base/art_design_processs.png" />
     <div class="clearfix"></div>
-    <div class="brclear"></div>
 </div>
-
 
 {{-- HTML::script('assets/js/vendor/modernizr.custom.37797.js'); --}}
 {{ HTML::script('assets/js/vendor/carouFredSel-6.2.1/jquery.carouFredSel-6.2.1.js'); }}
+{{ HTML::script('assets/js/vendor/jquery-mousewheel/jquery.mousewheel.js'); }}
 {{ HTML::script('assets/js/art.js'); }}
 
 

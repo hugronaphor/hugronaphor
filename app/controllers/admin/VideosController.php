@@ -88,11 +88,11 @@ class VideosController extends \BaseController {
 
       if (Input::hasFile('image')) {
         // First - delete old one.
-        if (isset($row->image) && $row->image != '0') {
-          if (!$file_deleted = Files::deleteFile($row->image)) {
+        if ($row->image && !$file_deleted = Files::deleteFile($row->image)) {
+          //if (!$file_deleted = Files::deleteFile($row->image)) {
             Notification::success('The old File can\'t be deleted.');
             return Redirect::route('admin.videos.edit', $row->vid);
-          }
+          //}
         }
 
         $row->image = Files::createFile(Input::file('image'), 'videos/' . $row->vid, 'image');

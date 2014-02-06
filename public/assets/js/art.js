@@ -1,237 +1,244 @@
 $(function() {
 
-    $(window).load(function() {
-        //	Responsive layout, resizing the items
-        $('#art-carousel').carouFredSel({
+  $(window).load(function() {
+    //	Responsive layout, resizing the items
+    $('#art-carousel').carouFredSel({
 //            circular: true, // Determines whether the carousel should be circular.
 //            infinite: true,
-            auto: false,
+      auto: false,
 //    prev: '#prev2',
 //    next: '#next2',
-            pagination: "#pager",
-            responsive: true,
-            width: '100%',
-            scroll: 2,
-            height: 'variable',
-            items: {
-                width: 350,
-                height: 'variable',
-                visible: {
-                    min: 2,
-                    max: 4
-                }
-            },
-            swipe: {
-                onTouch: true
-            }
-        });
+      pagination: "#pager",
+      responsive: true,
+      width: '100%',
+      scroll: 2,
+      height: 'variable',
+      items: {
+        width: 350,
+        height: 'variable',
+        visible: {
+          min: 2,
+          max: 4
+        }
+      },
+      swipe: {
+        onTouch: true
+      }
     });
+  });
 
-    // Create base header clone.
-    var clonedHeaderRow = $(".base-header", this);
-    $(".content").prepend(clonedHeaderRow.clone().removeClass('base-header'));
+  // Create base header clone.
+  var clonedHeaderRow = $(".base-header", this);
+  $(".content").prepend(clonedHeaderRow.clone().removeClass('base-header'));
 
-
-
-    // Art block.
+  // Art block.
+  if ($(window).width() > 1224) {
     // Initial build of all images.
+    $("#art-animation").append('<img class="begin-art-animation" style="display:none;" src="/assets/img/art/art_animation_begin.png" />');
     for (var i = 1; i < 18; i++) {
-        $(".art-animation").append('<img style="display:none;z-index:9;" src="http://youngers/assets/img/art/animation/line/' + i + '.svg" />');
-        if (i < 17) {
-            $(".art-animation").append('<img style="display:none;z-index:10;" src="http://youngers/assets/img/art/animation/point/' + i + '.svg" />');
-            $(".art-animation").append('<img style="display:none;z-index:11;" src="http://youngers/assets/img/art/animation/text/' + i + '.svg" />');
-        }
+      $("#art-animation").append('<img style="display:none;z-index:9;" src="/assets/img/art/animation/line/' + i + '.svg" />');
+      if (i < 17) {
+        $("#art-animation").append('<img style="display:none;z-index:10;" src="/assets/img/art/animation/point/' + i + '.svg" />');
+        $("#art-animation").append('<img style="display:none;z-index:11;" src="/assets/img/art/animation/text/' + i + '.svg" />');
+      }
     }
-    
-    var imgHeight = $('.art-animation img').eq(0).getHiddenDimensions(null);
-    alert(imgHeight)
-    var imgHeight = 200;
-    
-$('.art-animation').css('height', imgHeight);
-    // IE, Opera, Safari
+    $("#art-animation").append('<img class="end-art-animation" style="display:none;" src="/assets/img/art/art_animation_end.png" />');
+    // End Initial build of all images.  
+
+    // Set scroll area height.
+    $(window).load(function() {
+      $('#art-animation').css('height', $('#art-animation img').eq(10).height());
+    });
+    $(window).resize(function() {
+      $('#art-animation').css('height', $('#art-animation img').eq(10).height());
+    });
+    // End of Set scroll area height.
+
     var count = 0;
-    $('.art-animation').bind('mousewheel', function(e) {
-//        $('.art-animation').show();
-        // Get current svg object.
-        if (e.originalEvent.wheelDelta < 0) {
-            if (count === 0 || $('.art-animation').find('img').eq(count - 1).hasClass('processed')) {
-                drawImgs(3, count, 0);
-                if (count <= 56) {
-                    count = count + 3;
-                }
+
+    // Mousewell provided by "jquery-mousewheel" JQuery Plugin.
+    $('#art-how-we-work').mousewheel(function(event, delta) {
+
+      if ((count < 50 && count != 0) || (count != 0 && delta > 0)) {
+        event.preventDefault();
+      }
+
+      if ((count == 0 && delta < 0) || (count == 50 && $('#art-animation').find('img').eq(50).hasClass('processed') && delta > 0)) {
+        $('html,body').animate({
+          scrollTop: $(this).offset().top - $(".base-header").height()},
+        'slow');
+      }
+
+      // Mouse down.
+      // Counter-ul se strica cind se afiseaza toate elementele si cauzeaza probleme la ascunderea elementului 2.
+      if (delta < 0) {
+        if (count === 0 || $('#art-animation').find('img').eq(count - 1).hasClass('processed')) {
+          var showImagesNr = getImagesNrToProced(count);
+          for (var key = 0; key <= showImagesNr - 1; key++) {
+            var fade = getShowFadeSpeedByKey(key, count);
+
+            $('#art-animation').find('img').eq(count + key).fadeIn(fade, function() {
+              $(this).addClass('processed');
+            });
+            if (key === showImagesNr - 1 && count < 50) {
+              count = count + showImagesNr;
             }
-        } else {
-            if (!$('.art-animation').find('img').eq(count + 1).hasClass('processed')) {
-                hideImgs(3, count, 0);
-                if (count > 0) {
-                    count = count - 3;
-                }
+          }
+        }
+      } else {
+        var toCheckImgEq = (count - 1) <= 0 ? 0 : count - 1;
+        if ($('#art-animation').find('img').eq(toCheckImgEq).hasClass('processed')) {
+          var showImagesNr = getImagesNrToProced2(count);
+          for (var key = 0; key < showImagesNr; key++) {
+            var fade = getShowFadeSpeedByKey(key, count);
+            //console.log(key);
+            $('#art-animation').find('img').eq(count + key).fadeOut(fade, function() {
+              $(this).addClass('processed');
+            });
+            if (key === showImagesNr - 1 && count <= 51 && count > 0) {
+              count = (count - showImagesNr) < 0 ? 0 : count - showImagesNr;
             }
+          }
         }
 
-        //prevent page fom scrolling
-        return false;
-    });
-    
-    //Optional parameter includeMargin is used when calculating outer dimensions
-
-$.fn.getHiddenDimensions = function(includeMargin) {
-    var $item = this,
-        props = { position: 'absolute', visibility: 'hidden', display: 'block' },
-        dim = { width:0, height:0, innerWidth: 0, innerHeight: 0,outerWidth: 0,outerHeight: 0 },
-        $hiddenParents = $item.parents().andSelf().not(':visible'),
-        includeMargin = (includeMargin == null)? false : includeMargin;
-
-    var oldProps = [];
-    $hiddenParents.each(function() {
-        var old = {};
-
-        for ( var name in props ) {
-            old[ name ] = this.style[ name ];
-            this.style[ name ] = props[ name ];
+        // Somewhere the 3(count) items are lost,
+        // Cant find where - so - hide all on 0 count value.
+        if (count == 0) {
+          $('#art-animation img').fadeOut(fade);
         }
-
-        oldProps.push(old);
+      }
+    });
+  }
+  else {
+    // Simple image instead scroll animation.
+    $("#art-animation").append('<img class="no-art-animation-img" src="/assets/img/art/animation/line/final.svg" />');
+    // Set art image area height.
+    $(window).load(function() {
+      $('#art-animation').css('height', $('#art-animation img').eq(0).height());
+    });
+    $(window).resize(function() {
+      $('#art-animation').css('height', $('#art-animation img').eq(0).height());
     });
 
-    dim.width = $item.width();
-    dim.outerWidth = $item.outerWidth(includeMargin);
-    dim.innerWidth = $item.innerWidth();
-    dim.height = $item.height();
-    dim.innerHeight = $item.innerHeight();
-    dim.outerHeight = $item.outerHeight(includeMargin);
-
-    $hiddenParents.each(function(i) {
-        var old = oldProps[i];
-        for ( var name in props ) {
-            this.style[ name ] = old[ name ];
-        }
-    });
-
-    return dim;
-}
-
+  }
 });
 
+function getImagesNrToProced2(count) {
+  if (count <= 0 || count >= 49) {
+    var showImagesNr = 1;
+  }
+//  else if (count === 27) {
+//    var showImagesNr = 15;
+//  }
+  else {
+    var showImagesNr = 3;
+  }
+  return showImagesNr;
+}
+
+function getImagesNrToProced(count) {
+  if (count === 0 || count >= 49) {
+    var showImagesNr = 1;
+  }
+//  else if (count === 28) {
+//    var showImagesNr = 15;
+//  }
+  else {
+    var showImagesNr = 3;
+  }
+  return showImagesNr;
+}
+
+function getShowFadeSpeedByKey(key, count) {
+  var fade = 300;
+  // Line speed.
+  if (key == 0) {
+    fade = 200;
+  }
+  // point speed
+  else if (key == 1) {
+    fade = 300;
+  }
+  else {
+    fade = 400;
+  }
+
+  return fade;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function hideImgs(imgNumber, count, key) {
-    setTimeout(function() {
-        $('.art-animation').find('img').eq(count - key).fadeOut(50, function() {
-            $(this).removeClass('processed');
-        });
-        key++;
-        if (key <= imgNumber) {
-            hideImgs(imgNumber, count, key);
-        }
-    }, 50);
+//  setTimeout(function() {
+  $('#art-animation').find('img').eq(count - key).fadeOut(300, function() {
+    $(this).removeClass('processed');
+    key++;
+    if (key <= imgNumber) {
+      hideImgs(imgNumber, count, key);
+    }
+  });
+
+//  }, 50);
+  if (key === imgNumber) {
+    return true;
+
+  }
 }
 
 function drawImgs(imgNumber, count, key) {
+//console.log(count);
+  var speed = 50;
+  var fade = 600;
+  // Line speed.
+  if (key == 0) {
+    speed = 50;
+    fade = 100;
+  }
+  else if (key == 1) {
+    //speed = obj['speed'];
+    speed = 100;
+    fade = 120;
+  }
+  else {
+    speed = 200;
+    fade = 200;
+  }
+  // Increase speed for multiple points.
+  if (imgNumber > 3) {
+    speed = 100;
+    fade = 100;
+  }
 
-    var speed = 50;
-    var fade = 400;
-    // Line speed.
-    if (key == 0) {
-        speed = 50;
-        fade = 100;
-    }
-    else if (key == 1) {
-        //speed = obj['speed'];
-        speed = 100;
-        fade = 120;
-    }
-    else {
-        speed = 200;
-        fade = 200;
+  //setTimeout(function() {
+  $('#art-animation').find('img').eq(count + key).fadeIn(fade, function() {
+    $(this).addClass('processed');
+    key++;
+    if (key < imgNumber) {
+
+      drawImgs(imgNumber, count, key);
     }
 
-    setTimeout(function() {
-        $('.art-animation').find('img').eq(count + key).fadeIn(fade, function() {
-            $(this).addClass('processed');
-        });
-        key++;
-        if (key < imgNumber) {
-            drawImgs(imgNumber, count, key);
-        }
-    }, speed);
+  });
+
+  if (key === imgNumber) {
+    count = count + 200;
+    return true;
+
+  }
+
+  //}, speed);
+
 }
 
-setBlocksHeight = function(container) {
-    var headerHeight = $('.header').height(),
-            windowHeight = $(window).height();
-    $(container).each(function() {
-        $(this).css("min-height", windowHeight - headerHeight + "px");
-    });
-}
 
-
-
-
-
-//  var svgs = {
-//    0: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    1: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    2: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    3: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    4: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    5: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    6: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    7: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    8: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    9: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//    10: {
-//      "speed": 100,
-//      "dotSpeed": 150,
-//      "textSpeed": 400,
-//      "imgNumber": 3,
-//    },
-//  }
