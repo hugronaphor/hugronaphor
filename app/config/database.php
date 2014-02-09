@@ -52,9 +52,9 @@ return array(
     'mysql' => array(
       'driver' => 'mysql',
       'host' => 'ns13.host-md.net',
-      'database' => '7826-cyoungers',
-      'username' => '7826-cyoungers',
-      'password' => 'Cornel001',
+      'database' => '',
+      'username' => '',
+      'password' => '',
       'charset' => 'utf8',
       'collation' => 'utf8_unicode_ci',
       'prefix' => '',
