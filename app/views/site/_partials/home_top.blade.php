@@ -3,16 +3,14 @@
   <div class="fb-like" data-href="https://www.facebook.com/creativeyoungers" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="brclear"></div>
   <div class="h-top-slogan-wrapp">
-    <div class="h-top-slogan">
-      <p>Creative Youngers </p>
-
-      <p>with hight standarts</p>
+    <div class="h-top-slogan">      
+      {{ trans('base_site.home_slogan'); }}
     </div>
   </div>
   <div class="h-top-sub-slogan">
     <div class="xouter">
       <div class="xinner">
-        <p>A true artist is not one who is inspired, but who inspires others.</p>
+        <p>{{ trans('base_site.home_sub_slogan'); }}</p>
 
         <p class="slogan-signature">{{
           HTML::Image('assets/img/base/salvador_dali.png', 'Salvador Dali',

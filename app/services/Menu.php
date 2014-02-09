@@ -21,18 +21,18 @@ class Menu {
   public function getAllMenu() {
     return array(
       // Art.
-      'art' => array('name' => 'ART', 'parent' => '0'),
-      'art-about' => array('name' => 'About', 'parent' => 'art'),      
+      'art' => array('name' => trans('base_site.menu_main_art'), 'parent' => '0'),
+      'art-about' => array('name' => 'About', 'parent' => 'art'),
       'art-works' => array('name' => 'Works', 'parent' => 'art'),
       'art-how-we-work' => array('name' => 'How We Work', 'parent' => 'art'),
       // Movie.
-      'movie' => array('name' => 'MOVIE', 'parent' => '0'),
+      'movie' => array('name' => trans('base_site.menu_main_movie'), 'parent' => '0'),
 //      'art-about' => array('name' => 'About', 'parent' => 'movie'),
 //      // Web.
-      'web' => array('name' => 'WEB', 'parent' => '0'),
+      'web' => array('name' => trans('base_site.menu_main_web'), 'parent' => '0'),
 //      'art-about' => array('name' => 'About', 'parent' => 'web'),
 //      // Sound.
-      'contact' => array('name' => 'CONTACT', 'parent' => '0'),
+      'contact' => array('name' => trans('base_site.menu_main_contact'), 'parent' => '0'),
 //      'art-about' => array('name' => 'About', 'parent' => 'sound'),
     );
   }

@@ -19,5 +19,5 @@
     </ul>      
 
   </div>
-
+{{-- LaravelLocalization::getLanguageBar() --}}
 </div>

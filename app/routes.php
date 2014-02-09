@@ -37,87 +37,101 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function () {
   Route::resource('config', 'App\Controllers\Admin\ConfigController');
 });
 
-Route::get('/', array(
-  'as' => 'home',
-  'uses' => 'GeneralController@getHome'
-));
+
+//Route::group(array('prefix' => LaravelLocalization::setLocale()), function() {
+//  
+//  /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP * */
+//  Route::get('/', array(
+//    'as' => 'home',
+//    'uses' => 'GeneralController@getHome'
+//  ));
+//
+//// Site Routes.
+//  Route::get('contact', array(
+//    'as' => 'contact',
+//    'uses' => 'GeneralController@getContact'
+//  ));
+//
+//// Art group.
+//  Route::get('art', array(
+//    'as' => 'art',
+//    'uses' => 'ArtController@getIndex'
+//  ));
+//  // Movie group.
+//  Route::get('movie/{id?}', array(
+//    'as' => 'movie',
+//    'uses' => 'GeneralController@getMovie'
+//  ));
+//// End Movie group.
+//// Web group.
+//  Route::get('web', array(
+//    'as' => 'web',
+//    'uses' => 'GeneralController@getWeb'
+//  ));
+//});
+
+Route::group(
+  array(
+  'prefix' => LaravelLocalization::setLocale(),
+  //'before' => 'LaravelLocalizationRedirectFilter' // LaravelLocalization filter // to enable on release
+  ), function() {
+  /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP * */
+  Route::get('/', array(
+    'as' => 'home',
+    'uses' => 'GeneralController@getHome'
+  ));
 
 // Site Routes.
-Route::get('contact', array(
-  'as' => 'contact',
-  'uses' => 'GeneralController@getContact'
-));
+  Route::get('contact', array(
+    'as' => 'contact',
+    'uses' => 'GeneralController@getContact'
+  ));
 
+// Art group.
+  Route::get('art', array(
+    'as' => 'art',
+    'uses' => 'ArtController@getIndex'
+  ));
+  // Movie group.
+  Route::get('movie/{id?}', array(
+    'as' => 'movie',
+    'uses' => 'GeneralController@getMovie'
+  ));
+// End Movie group.
+// Web group.
+  Route::get('web', array(
+    'as' => 'web',
+    'uses' => 'GeneralController@getWeb'
+  ));
+});
+
+/** OTHER PAGES THAT SHOULD NOT BE LOCALIZED * */
 Route::get('raphael-js', array(
   'as' => 'raphael',
   'uses' => 'GeneralController@getRaphael'
 ));
 
-// Art group.
-Route::get('art', array(
-  'as' => 'art',
-  'uses' => 'ArtController@getIndex'
-));
-
-Route::group(array('prefix' => 'art'), function () {
 
 
-
-  Route::any('/', function() {
-    return Redirect::Route('art-about');
-  });
-
-  Route::get('about', array(
-    'as' => 'art-about',
-    'uses' => 'ArtController@getAbout'
-  ));
-  Route::get('how-we-work', array(
-    'as' => 'art-how-we-work',
-    'uses' => 'ArtController@getHowWeWork'
-  ));
-
-  Route::get('works', array(
-    'as' => 'art-works',
-    'uses' => 'ArtController@getWorks'
-  ));
-});
-
-// Movie group.
-Route::get('movie/{id?}', array(
-  'as' => 'movie',
-  'uses' => 'GeneralController@getMovie'
-));
-// End Movie group.
-
-// Web group.
-Route::get('web', array(
-  'as' => 'web',
-  'uses' => 'GeneralController@getWeb'
-));
-
-Route::group(array('prefix' => 'web'), function () {
-
-  Route::any('/', function() {
-    return Redirect::Route('art-about');
-  });
-  Route::any('about', function() {
-    return Redirect::Route('art-about');
-  });
-});
-
-Route::get('sound', array(
-  'as' => 'sound',
-  'uses' => 'ArtController@getIndex'
-));
-
-Route::group(array('prefix' => 'sound'), function () {
-
-  Route::any('/', function() {
-    return Redirect::Route('art-about');
-  });
-  Route::any('about', function() {
-    return Redirect::Route('art-about');
-  });
-});
-
-// End Sound group.
+//Route::group(array('prefix' => 'art'), function () {
+//
+//
+//
+//  Route::any('/', function() {
+//    return Redirect::Route('art-about');
+//  });
+//
+//  Route::get('about', array(
+//    'as' => 'art-about',
+//    'uses' => 'ArtController@getAbout'
+//  ));
+//  Route::get('how-we-work', array(
+//    'as' => 'art-how-we-work',
+//    'uses' => 'ArtController@getHowWeWork'
+//  ));
+//
+//  Route::get('works', array(
+//    'as' => 'art-works',
+//    'uses' => 'ArtController@getWorks'
+//  ));
+//});

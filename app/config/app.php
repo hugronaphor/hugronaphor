@@ -103,6 +103,7 @@ return array(
     'Illuminate\Workbench\WorkbenchServiceProvider',
     'Cartalyst\Sentry\SentryServiceProvider',
     'Krucas\Notification\NotificationServiceProvider',
+    'Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider',
   ),
   /*
     |--------------------------------------------------------------------------
@@ -165,6 +166,7 @@ return array(
     'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
     'Notification' => 'Krucas\Notification\Facades\Notification',
     'Image' => 'App\Facades\ImageFacade',
+    'LaravelLocalization'   => 'Mcamara\LaravelLocalization\Facades\LaravelLocalization',
     
     'Article' => 'App\Models\Article',
     'Page' => 'App\Models\Page',

@@ -16,7 +16,7 @@
   </head>
   <body>
 
-    <div class="page {{$vars['currentRoute']}}">
+    <div class="page {{$vars['currentRoute']}}">      
       @if ($vars['currentRoute'] === 'home')
       @include('site._partials.home_top')
       @endif
