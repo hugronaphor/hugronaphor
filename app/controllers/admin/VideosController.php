@@ -11,7 +11,8 @@ use Image,
     Redirect,
     Sentry,
     Str,
-    Illuminate\Support\Facades\DB;
+    Illuminate\Support\Facades\DB,
+    App;
 
 class VideosController extends \BaseController {
 
@@ -73,6 +74,7 @@ class VideosController extends \BaseController {
   }
 
   public function update($id) {
+    App::setLocale('ro');
     $validation = new VideoValidator;
 
     if ($validation->passes()) {

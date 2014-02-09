@@ -191,11 +191,17 @@ body {
   padding: 5px;
 }
 
-/*--------------*/
+/* Contact Page */
+
+.page.contact {
+  /*  min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -15em;*/
+}
 
 .contact-slogan {
-  margin: 30px auto;
-  width: 100%;
+  padding: 30px;
   text-align: center;
 }
 
@@ -265,6 +271,10 @@ body {
   bottom: 0;
 }
 
+.page.contact .footer, .page.contact .push {
+  height: 15em;
+}
+
 /* Footer CONTACT link effect: Brackets */
 .footer .f-block-1 a::before,
 .footer .f-block-1 a::after {
@@ -313,7 +323,7 @@ body {
   padding-top: 20px;
 }
 
-.f-icons ul {
+/*.f-icons ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -428,7 +438,7 @@ body {
 .f-icons ul li a:hover,
 .f-icons ul li a.active {
   color: #d68caf;
-}
+}*/
 
 .contact-magic {
   text-transform: uppercase;
@@ -443,7 +453,6 @@ body {
   width: 60%;
   font-size: 0.7em;
 }
-
 .copywrite {
   margin: 0 auto;
   width: 300px;
@@ -451,6 +460,17 @@ body {
   border-top: 1px solid rgb(118, 124, 136);
   bottom: -59px;
   position: relative;
+  margin-top: 10px;
+}
+
+.contact .copywrite {
+  margin: 0 auto;
+  width: 300px;
+  font-size: 0.5em;
+  border-top: 1px solid rgb(252, 252, 252);
+  bottom: 0;
+  position: relative;
+  margin-top: 10px;
 }
 
 .copywrite p {
@@ -475,33 +495,8 @@ body {
 /*START Contact Animation*/
 .contact-animation {
   font-size: 2em;
+  max-width: 69%;
 }
-
-/*END Contact Animation*/
-
-/*@media only screen and (max-width: 630px) {*/
-
-/*body { font-size: 17px; }*/
-/*.base-navigation {*/
-/*width: 386px;*/
-/*}*/
-
-/*}*/
-
-/*@media only screen and (max-width: 540px) {*/
-
-/*body { font-size: 15px; }*/
-/*.base-navigation ul li a {*/
-/*margin: 2px;*/
-/*padding: 2px 10px 2px 10px;*/
-/*}*/
-/*.base-navigation {*/
-/*width: 272px;*/
-/*}*/
-
-/*}*/
-
-
 
 /*END Contact Animation*/
 
@@ -1075,12 +1070,13 @@ a.next img {
 /*End Web Page*/
 
 /*Movies Page*/
-.page.movie {
+.page {
   background: rgb(255, 255, 255);
 }
 
 .movie .movie-page-wrapper {
   width: 80%;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
@@ -1364,6 +1360,7 @@ a.next img {
 }
 .art .base-header,
 .web .base-header,
+.contact .base-header,
 .movie .base-header {
   position: fixed;
   width: 100%;
@@ -1703,8 +1700,13 @@ a.next img {
   .slogan-signature img {
     width: 138px;
   }
-  .copywrite {
+  .copywrite, .art-block-2 {
     width: auto;
+  }
+  .art-block-3 {
+    left: auto;
+    margin: 20px auto;
+    font-size: 36px;;
   }
 }
 
@@ -1804,6 +1806,13 @@ a.next img {
     width: 90%;
     font-size: 45px;
   }
+  .art-block-2 {
+    width: auto;
+  }
+  .art-block-3 {
+    left: auto;
+    margin: 80px auto;
+  }
 
 }
 
@@ -1859,6 +1868,12 @@ a.next img {
     margin: 20px auto 10px !important;
     width: 200px;
     float: none !important;
+  }
+  .art-block-2 {
+    width: auto;
+  }
+  .art-block-3 {
+    left: 7%;
   }
 }
 

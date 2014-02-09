@@ -1,7 +1,7 @@
 {{ HTML::style('assets/css/footer_contact.css'); }}
 
 <div class="f-block-1"><p>CONTACT US</p></div>
-<div class="f-block-2 f-icons">
+<div class="f-block-2 f-icons h-top-social">
   <ul>
     <li rel="linked-in"><a href="#"></a></li>
     <li rel="fb"><a href="#"></a></li>
@@ -15,3 +15,4 @@
 <div class="f-block-4 contact-contacts">{{ $vars['footer_contact_text'] }}</div>
 <div class="f-block-4 copywrite"><p>Copywrite 2013 youngers. All rights
     reserved</p></div>
+<div class="clearfix"></div>

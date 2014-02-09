@@ -37,6 +37,7 @@ class GeneralController extends BaseController {
       $this->vars[$var->name] = $var->value;
     }
 
+    $this->vars['title'] = 'Contact';
     return \View::make('site.contact')->with('vars', $this->vars);
   }
 
