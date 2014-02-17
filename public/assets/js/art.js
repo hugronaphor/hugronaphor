@@ -1,5 +1,48 @@
 $(function() {
 
+
+
+  $('#art-carousel div.slider-block').hover(
+          function() {
+            var speed = 400,
+                    overlayHeight = $(this).height(),
+                    firstOverlayHeight = $firstEl.height(),
+                    secondOverlayHeight = $secondEl.height();
+
+
+            $firstEl = $(this).find('.thumb-overlay .first');
+            $secondEl = $(this).find('.thumb-overlay .second');
+
+
+            if ($firstEl.hasClass('processed')) {
+
+              $firstEl.animate({
+                top: overlayHeight / 2
+              }, speed, function() {
+                //$(this).addClass('processed');
+              });
+            }
+
+            if ($secondEl.hasClass('processed')) {
+              $secondEl.animate({
+                bottom: overlayHeight / 2
+              }, speed, function() {
+                //$(this).addClass('processed');
+              });
+            }
+
+          },
+          function() {
+            $firstEl = $(this).find('.thumb-overlay .first');
+            $secondEl = $(this).find('.thumb-overlay .second');
+            $firstEl.stop().css({top: 0}).addClass('processed');
+            $secondEl.stop().css({bottom: 0}).addClass('processed');
+          }
+
+
+  );
+
+
   $(window).load(function() {
     //	Responsive layout, resizing the items
     $('#art-carousel').carouFredSel({
@@ -65,7 +108,7 @@ $(function() {
 
       if ((count == 0 && delta < 0) || (count == 50 && $('#art-animation').find('img').eq(50).hasClass('processed') && delta > 0)) {
         $('html,body').animate({
-          scrollTop: $(this).offset().top - $(".base-header").height()},
+          scrollTop: $(this).offset().top - $(".base-header").height() - 20},
         'slow');
       }
 

@@ -12,7 +12,7 @@ return array(
     |
    */
 
-  'debug' => true,
+  'debug' => false,
   /*
     |--------------------------------------------------------------------------
     | Application URL
@@ -173,6 +173,7 @@ return array(
     'Variable' => 'App\Models\Variable',
     'File' => 'App\Models\File',
     'Video' => 'App\Models\Video',
+    'Art' => 'App\Models\Art',
     
   ),
 );

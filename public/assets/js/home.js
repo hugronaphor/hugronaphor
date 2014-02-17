@@ -1,4 +1,67 @@
-$(function () {
+$(function() {
+
+  initDesignHaos();
+
+  function initDesignHaos() {
+
+    var haosString = $(".home-art-block-img").text();
+
+    var haosWords = haosString.split(" "),
+            outText = '';
+
+    for (i = 0; i < haosWords.length; i++) {
+      var randomNumb = Math.floor((Math.random() * 4) + 1);
+
+      switch (randomNumb)
+      {
+        case 1:
+          outText += '<span class="italic">' + haosWords[i] + ' </span>';
+          break;
+        case 2:
+          outText += '<span class="bold">' + haosWords[i] + ' </span>';
+          break;
+        case 3:
+          outText += '<span class="biggersize">' + haosWords[i] + ' </span>';
+          break;
+        case 4:
+          outText += '<span class="lesssize">' + haosWords[i] + ' </span>';
+          break;
+        default:
+          outText += '<span class="">' + haosWords[i] + ' </span>';
+      }
+
+
+    }
+
+    $(".home-art-block-img").html(outText);
+
+  }
+
+//  console.log(haosWords);
+
+  $(".home-first-text-piece span.design-action").click(function() {
+    var haosStringEl = $(".home-art-block-img");
+
+    // Haos text init.
+    //if (!$(haosStringEl).hasClass('processed')) {
+      $(haosStringEl).find('span').each(function() {
+        $(this).animate({fontSize: '22px', 'fontweight': 'initial', fontstyle: 'normal'}, 0);
+        $(this).removeClass().parent().addClass('processed');
+      });
+    //}
+
+    return false;
+
+  });
+
+  $(".home-first-text-piece span.chaos-action").click(function() {
+    initDesignHaos();
+    return false;
+  });
+
+
+
+
 
   var baseHeader = $(".base-header");
   var baseHeaderHeight = baseHeader.height();
@@ -6,13 +69,13 @@ $(function () {
   var baseHeaderTop = offset.top;
   var topHeaderHeight = $(".home-top-land").height();
 
-  $(window).load(function () {
+  $(window).load(function() {
     // executes when complete page is fully loaded.
     setMarginTopForBaseHeader();
   });
   //setMarginTopForBaseHeader(); // can't get right header height on first page load, I suppose because of images load.
   //$('.header').css('margin-top', $(".home-top-land").height() - $(".slogan-signature").height());
-  $(window).resize(function () {
+  $(window).resize(function() {
     setMarginTopForBaseHeader()
   });
 
@@ -22,14 +85,27 @@ $(function () {
 
   // Base top fixed menu.
   function UpdateOnScroll() {
-    $(".page").each(function () {
+    $(".page").each(function() {
 
       var el = $(this),
-        offset = el.offset(),
-        scrollTop = $(window).scrollTop(),
-        floatingHeader = $(".floatingHeader", this),
-        tremendousEl = $('.home-about-facts'),
-        tremendousElOffset = tremendousEl.offset();
+              offset = el.offset(),
+              scrollTop = $(window).scrollTop(),
+              floatingHeader = $(".floatingHeader", this),
+              tremendousEl = $('.home-about-facts'),
+              haosStringEl = $(".home-art-block-img"),
+              tremendousElOffset = tremendousEl.offset(),
+              haosStringElOffset = haosStringEl.offset();
+
+//      // Haos text init.
+//      if ((scrollTop > haosStringElOffset.top - 200)) {
+//        if (!$(haosStringEl).hasClass('processed')) {
+//          $(haosStringEl).find('span').each(function() {
+//            $(this).animate({fontSize: '22px', 'fontweight': 'initial', fontstyle: 'normal'}, 400);
+//            $(this).removeClass().parent().addClass('processed');
+//          });
+//
+//        }
+//      }
 
       // Tremendous facts init.
       if ((scrollTop > tremendousElOffset.top - 500)) {
@@ -61,12 +137,12 @@ $(function () {
 
   var clonedHeaderRow;
 
-  $(".page").each(function () {
+  $(".page").each(function() {
     clonedHeaderRow = $(".base-header", this);
     clonedHeaderRow
-      .before(clonedHeaderRow.clone())
-      //.css("width", clonedHeaderRow.width())
-      .addClass("floatingHeader");
+            .before(clonedHeaderRow.clone())
+            //.css("width", clonedHeaderRow.width())
+            .addClass("floatingHeader");
   });
 
   $(window).scroll(UpdateOnScroll).trigger("scroll");
@@ -84,9 +160,9 @@ $(function () {
 
   function setHomeVideoWrappHeight() {
     var videoHeight = $('.h-video-wrapp video').height(),
-      el1 = $('.h-video-on-video'),
-      cultureHeight = $('.video-our-culture').height(),
-      el2 = $('.h-culture-centered');
+            el1 = $('.h-video-on-video'),
+            cultureHeight = $('.video-our-culture').height(),
+            el2 = $('.h-culture-centered');
     //el1.css({height: videoHeight, marginTop: -videoHeight -5 });
     $('.h-video-centered-content').css({top: videoHeight / 2 - $('.h-video-centered-content').height() / 2});
     el2.css({top: cultureHeight / 2 - el2.height() / 2});
@@ -101,13 +177,14 @@ $(function () {
  */
 function increaseFacts(intervalObj, classString, steps) {
   var numberTo = $(classString).attr('data-count'),
-    s = numberTo / steps,
-    step = 1,
-    el = $(classString + ' p:first-child');
+          s = numberTo / steps,
+          step = 1,
+          el = $(classString + ' p:first-child');
 
-  if (el.hasClass('processed')) return;
+  if (el.hasClass('processed'))
+    return;
 
-  intervalObj = setInterval(function () {
+  intervalObj = setInterval(function() {
     el.html(Math.ceil(s * step));
     step += 1;
     steps = steps - 1;
@@ -119,8 +196,8 @@ function increaseFacts(intervalObj, classString, steps) {
 }
 
 function hideImgs(imgNumber, count, key) {
-  setTimeout(function () {
-    $('.art-animation').find('img').eq(count - key).fadeOut(50, function () {
+  setTimeout(function() {
+    $('.art-animation').find('img').eq(count - key).fadeOut(50, function() {
       $(this).removeClass('processed');
     });
     key++;
@@ -149,8 +226,8 @@ function drawImgs(imgNumber, count, key) {
     fade = 200;
   }
 
-  setTimeout(function () {
-    $('.art-animation').find('img').eq(count + key).fadeIn(fade, function () {
+  setTimeout(function() {
+    $('.art-animation').find('img').eq(count + key).fadeIn(fade, function() {
       $(this).addClass('processed');
     });
     key++;
@@ -160,10 +237,10 @@ function drawImgs(imgNumber, count, key) {
   }, speed);
 }
 
-setBlocksHeight = function (container) {
+setBlocksHeight = function(container) {
   var headerHeight = $('.header').height(),
-    windowHeight = $(window).height();
-  $(container).each(function () {
+          windowHeight = $(window).height();
+  $(container).each(function() {
     $(this).css("min-height", windowHeight - headerHeight + "px");
   });
 }

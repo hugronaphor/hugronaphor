@@ -84,6 +84,7 @@ class VideosController extends \BaseController {
       //$for_slug = $row->f_name . ' ' . $row->m_name . ' ' . $row->l_name;
       $row->slug = Str::slug($row->title);
       $row->body = Input::get('body');
+      $row->year = Input::get('year');
       //$row->user_id = Sentry::getUser()->id;
 
       if (Input::hasFile('image')) {
@@ -91,7 +92,7 @@ class VideosController extends \BaseController {
         if ($row->image && !$file_deleted = Files::deleteFile($row->image)) {
           //if (!$file_deleted = Files::deleteFile($row->image)) {
             Notification::success('The old File can\'t be deleted.');
-            return Redirect::route('admin.videos.edit', $row->vid);
+            //return Redirect::route('admin.videos.edit', $row->vid);
           //}
         }
 

@@ -8,7 +8,7 @@ class VideoValidator extends Validator {
     'title' => 'required',
     'url' => 'required',
     'author' => 'required',
-    'year' => 'required|integer',
+    //'year' => 'required|integer',
     'width' => 'integer',
     'height' => 'integer',
     'image' => 'image|max:15500'

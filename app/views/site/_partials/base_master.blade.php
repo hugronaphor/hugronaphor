@@ -8,11 +8,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ isset($vars['title']) ? $vars['title'] . " | " : ""}} Youngers</title>
 
+    <link rel="icon" type="image/gif" href="/assets/img/base/favicon.png">
+    <link rel="image_src" href="/assets/img/base/logo.jpg"/>
+    <meta name="description" content="Digital agency">
+    <meta name="keywords" content="Design, Web design, Web Development, Video, Art">
+    <meta property="og:site_name" content="Youngers"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/assets/img/base/logo.jpg"/>
+    <meta property="og:description" content="Youngers is an advertising agency. Our aim is to develop a proper business relationships." />
+    
     <meta name="viewport" content="width=device-width">
     {{ HTML::style('assets/css/normalize.css'); }}
     {{ HTML::style('assets/css/style.css'); }}
     <script
     src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+<!--    <script
+    src="http://youngers/assets/js/vendor/carouFredSel-6.2.1/jquery-1.8.2.min.js"></script>-->
+    
   </head>
   <body>
 

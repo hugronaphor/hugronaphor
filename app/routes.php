@@ -32,8 +32,8 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'), function () {
   Route::any('/', 'App\Controllers\Admin\PagesController@index');
   Route::resource('articles', 'App\Controllers\Admin\ArticlesController');
   Route::resource('videos', 'App\Controllers\Admin\VideosController');
+  Route::resource('art', 'App\Controllers\Admin\ArtController');
   Route::resource('pages', 'App\Controllers\Admin\PagesController');
-
   Route::resource('config', 'App\Controllers\Admin\ConfigController');
 });
 
@@ -134,4 +134,9 @@ Route::get('raphael-js', array(
 //    'as' => 'art-works',
 //    'uses' => 'ArtController@getWorks'
 //  ));
+//});
+
+//App::missing(function($exception)
+//{
+//    return Response::view('site.404', array(), 404);
 //});

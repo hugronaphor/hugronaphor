@@ -20,7 +20,10 @@
       array('class'=>'thumb-play-btn')) }}
         <div class="credentials">
           <p class="author">{{$item['author']}}</p>
+          @if (!empty($item['year']))
           <p class="year">{{$item['year']}}</p>
+          @endif
+
         </div>
       </div>
 

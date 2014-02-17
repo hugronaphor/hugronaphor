@@ -2,29 +2,29 @@ $(function() {
 
     $(window).load(function() {
         //	Responsive layout, resizing the items
-        $('#web-carousel').carouFredSel({
-//            circular: true, // Determines whether the carousel should be circular.
-//            infinite: true,
-            auto: false,
-//            prev: '#prev',
-//            next: '#next',
-            pagination: "#pager",
-            responsive: true,
-            width: '100%',
-            scroll: 1,
-            height: 'variable',
-            items: {
-                width: 350,
-                height: 'variable',
-                visible: {
-                    min: 2,
-                    max: 2
-                }
-            },
-            swipe: {
-                onTouch: true
-            }
-        });
+//        $('#web-carousel').carouFredSel({
+////            circular: true, // Determines whether the carousel should be circular.
+////            infinite: true,
+//            auto: false,
+////            prev: '#prev',
+////            next: '#next',
+//            pagination: "#pager",
+//            responsive: true,
+//            width: '100%',
+//            scroll: 1,
+//            height: 'variable',
+//            items: {
+//                width: 350,
+//                height: 'variable',
+//                visible: {
+//                    min: 2,
+//                    max: 2
+//                }
+//            },
+//            swipe: {
+//                onTouch: true
+//            }
+//        });
     });
 
     // Create base header clone.

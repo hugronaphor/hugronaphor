@@ -210,7 +210,7 @@ $(function() {
           class: 'dot-g',
           id: 'dot-' + key,
 //        style: 'top:' + obj['x'] + '%;left:' + (key*1.9) + '%',
-          style: 'top:' + obj['x'] + '%;left:' + obj['y'] + '%',
+          style: 'top:' + obj['x'] + '%;left:' + (key * 2.1) + '%',
         }).html(obj['text']).appendTo('.contact-animation');
         //document.getElementById('bump1').play();
         key++;
