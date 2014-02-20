@@ -2,7 +2,12 @@
 
 @section('content')
 
-<div class="contact-slogan">we are where you need us to be</div>
+<div class="contact-slogan">{{ trans('base_site.contact_top_1') }}</div>
+<div class="data-store">
+  <span id="contact_string_1">{{ trans('base_site.contact_string_1') }}</span>
+  <span id="contact_string_2">{{ trans('base_site.contact_string_2') }}</span>
+  <span id="contact_string_3">{{ trans('base_site.contact_string_3') }}</span>
+</div>
 <div class="contact-animation"></div>
 
 <div class="push-40"></div>

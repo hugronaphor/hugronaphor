@@ -6,8 +6,8 @@
 		// Add any supported to the supportedLocales array.
 		// A list of many locales has been added to the bottom of this file for your convenience.
 		'supportedLocales' => array(
-			"en" => array("name" => "English",		"script" => "Latin",		"dir" => "ltr",		"native" => "English"),
-      "ro" => array("name" => "Romanian",	  "script" => "Latin",		"dir" => "ltr",		"native" =>	"Limba română"),
+			"en" => array("name" => "English",		"script" => "Latin",		"dir" => "ltr",		"native" => "En"),
+      "ro" => array("name" => "Romanian",	  "script" => "Latin",		"dir" => "ltr",		"native" =>	"Ro"),
 			//"es" => array("name" => "Spanish",		"script" => "Latin",		"dir" => "ltr",		"native" => "Español"),
 		),
 

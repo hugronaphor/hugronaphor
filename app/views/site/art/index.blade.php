@@ -3,12 +3,12 @@
 @section('content')
 
 <div class="art-first-section">
-  <div class="art-block-1">WE ARE YOUNG</div>
+  <div class="art-block-1">{{ trans('base_site.art_block_1') }}</div>
   <div class="brclear"></div>
   <div class="art-block-2"><div>{{ trans('base_site.art_block_2') }}</div>
   </div>
   <div class="brclear"></div>
-  <div class="art-block-3">YOUNGERS ART GROUP</div>
+  <div class="art-block-3">{{ trans('base_site.art_block_3') }}</div>
   <div class="brclear"></div>
   <div class="art-block-4">{{ trans('base_site.art_block_4') }}</div>
   <div class="brclear"></div>

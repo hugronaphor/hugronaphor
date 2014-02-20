@@ -168,6 +168,23 @@ $(function() {
     el2.css({top: cultureHeight / 2 - el2.height() / 2});
   }
 
+// run js if Chrome is being used
+if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+    // set background-attachment back to the default of 'scroll'
+    $('.video-our-culture').css('background-attachment', 'scroll');
+
+    // move the background-position according to the div's y position
+    $(window).scroll(function(){
+
+        scrollTop = $(window).scrollTop();
+        photoTop = $('.video-our-culture').offset().top;
+        distance = (photoTop - scrollTop);
+        $('.video-our-culture').css('background-position', 'center ' + (distance*-1) + 'px');
+
+    });
+}  
+
+
 });
 /**
  * Dynamically increase of the number.

@@ -98,6 +98,30 @@ body {
   padding: 2px 0;
 }
 
+ul.language_bar_chooser {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+  font-size: 18px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}
+
+ul.language_bar_chooser li {
+  display: inline;
+}
+
+ul.language_bar_chooser ul li a {
+  text-decoration: none;
+  padding: 0px 10px;
+  color: rgb(133, 132, 138);
+  background: none;
+  font-size: 20px;
+}
+
 .nav-wrapper {
   width: 100%;
   background: rgb(242, 242, 242);
@@ -332,8 +356,8 @@ body {
 
 .footer .f-block-1 {
   position: relative;
-  margin-bottom: 30px;
-  top: 40px;
+  margin-bottom: 50px;
+  top: 53px;
 }
 
 .f-icons {
@@ -466,7 +490,7 @@ body {
 
 .footer .contact-contacts {
   position: relative;
-  padding-top: 24px;
+  padding-top: 45px;
   margin: 0 auto;
   width: 60%;
   font-size: 0.7em;
@@ -488,7 +512,7 @@ body {
   border-top: 1px solid rgb(252, 252, 252);
   bottom: 0;
   position: relative;
-  margin-top: 26px;
+  margin-top: 55px;
 }
 
 .copywrite p {
@@ -513,7 +537,7 @@ body {
 /*START Contact Animation*/
 .contact-animation {
   font-size: 2em;
-  max-width: 69%;
+  max-width: 767px;
 }
 
 /*END Contact Animation*/
@@ -856,6 +880,7 @@ p.about-facts-title {
 }
 
 .home-web-block ul {
+  margin: 25px 0 0 0;
   padding: 0;
   list-style-type: none;
   list-style-image: none;
@@ -893,8 +918,8 @@ p.about-facts-title {
 }
 
 .home-web-block-middle div {
-  width: 32%;
-  display: inline-block;
+  width: 33.33%;
+  display: table-cell;
   vertical-align: middle;
   position: relative;
   /*border: 1px solid  black;*/
@@ -1388,7 +1413,7 @@ a.next img {
   margin: 25px auto 0px;
   font-size: 22px;
   text-align: left;
-  width: 527px;
+  width: 590px;
 }
 
 .art-block-3 {
@@ -1852,10 +1877,12 @@ a.next img {
   }
   .home-web-block-middle div {
     width: auto;
+    display: inline-block;
   }
   .home-web-block-middle .h-w-b-m-middle {
     margin: 20px auto;
   }
+
   .art-block-4 {
     left: auto;
     text-align: center;
@@ -1974,6 +2001,7 @@ a.next img {
 
   .home-web-block-middle div {
     width: auto;
+    display: inline-block;
   }
   .home-web-block-middle .h-w-b-m-middle {
     margin: 20px auto;
@@ -2064,6 +2092,12 @@ a.next img {
   .art-block-3 {
     left: 7%;
   }
+  
+  ul.language_bar_chooser {
+  font-size: 17px;
+  top: 4px;
+}
+  
 }
 
 /*Large desktop*/

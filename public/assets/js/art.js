@@ -1,21 +1,15 @@
 $(function() {
-
-
-
+  
+  // Animate text on hover for Art slider.
   $('#art-carousel div.slider-block').hover(
           function() {
             var speed = 400,
-                    overlayHeight = $(this).height(),
-                    firstOverlayHeight = $firstEl.height(),
-                    secondOverlayHeight = $secondEl.height();
-
+                    overlayHeight = $(this).height();
 
             $firstEl = $(this).find('.thumb-overlay .first');
             $secondEl = $(this).find('.thumb-overlay .second');
 
-
             if ($firstEl.hasClass('processed')) {
-
               $firstEl.animate({
                 top: overlayHeight / 2
               }, speed, function() {
@@ -30,7 +24,6 @@ $(function() {
                 //$(this).addClass('processed');
               });
             }
-
           },
           function() {
             $firstEl = $(this).find('.thumb-overlay .first');
@@ -38,7 +31,6 @@ $(function() {
             $firstEl.stop().css({top: 0}).addClass('processed');
             $secondEl.stop().css({bottom: 0}).addClass('processed');
           }
-
 
   );
 
@@ -211,16 +203,7 @@ function getShowFadeSpeedByKey(key, count) {
 
 
 
-
-
-
-
-
-
-
-
-
-
+// Unused code bellow.
 
 function hideImgs(imgNumber, count, key) {
 //  setTimeout(function() {
@@ -283,5 +266,3 @@ function drawImgs(imgNumber, count, key) {
   //}, speed);
 
 }
-
-

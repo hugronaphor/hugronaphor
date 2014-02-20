@@ -17,7 +17,8 @@
         @endif  
       @endforeach
     </ul>      
-
+{{ LaravelLocalization::getLanguageBar() }}
   </div>
-{{-- LaravelLocalization::getLanguageBar() --}}
+
 </div>
+

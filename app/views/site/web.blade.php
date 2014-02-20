@@ -2,30 +2,23 @@
 
 @section('content')
 
-<div class="web-introduction">
-  <p>Creating a successful website starts with having an effective process.</p>
-  <p>We build websites from scratch, exhaustively planning every aspect of the project.</p>
-  <p>Our methodology focuses on organization, planning, execution and delivery.</p>
-</div>
-
+<div class="web-introduction">{{ trans('base_site.web_top_1') }}</div>
 <div class="web-we-do">{{ trans('base_site.general_we_do') }}</div>
 
-
 <div id="web-tags-container">
-  <div class="item" title="We investigate your goal and deliver the best solution"><p>research</p></div>
-  <div class="item" title="We create practice design based on your branding requirements"><p>design</p></div>
-  <div class="item w4" title="We seriously hung the choice of development environment based on application requirements"><p>development</p></div>
-  <div class="item " title="We create responsive websites to deliver a consistent customer experience across desktop, mobile and tablet devices"><p>responsive</p></div>
-  <div class="item" title="We have holistic approach to Quality Assurance"><p>QA</div>
-
+  <div class="item" title="{{ trans('base_site.web_1_1_2') }}"><p>{{ trans('base_site.web_1_1_1') }}</p></div>
+  <div class="item" title="{{ trans('base_site.web_1_2_2') }}"><p>{{ trans('base_site.web_1_2_1') }}</p></div>
+  <div class="item w4" title="{{ trans('base_site.web_1_3_2') }}"><p>{{ trans('base_site.web_1_3_1') }}</p></div>
+  <div class="item " title="{{ trans('base_site.web_1_4_2') }}"><p>{{ trans('base_site.web_1_4_1') }}</p></div>
   
-  <div class="item w4" title="Meet the exact needs of the customer, without fuss or bother"><p>user experience</p></div>
-  <div class="item" title="We can migrate data from different platforms and preserve all URLs"><p>data migration</p></div>
-
-  <div class="item w4" title=""><p>user interface design</p></div>
-  <div class="item " title="We optimize any piece of application in order to achieve better performance"><p>performance</p></div>
-  <div class="item" title="We are always ready to make website updates and improvements"><p>maintenance</p></div>
-  <div class="item w4" title="We give you ability to manage your own content"><p>content management</p></div>
+  <div class="item" title="{{ trans('base_site.web_1_5_2') }}"><p>{{ trans('base_site.web_1_5_1') }}</div>
+  <div class="item w4" title="{{ trans('base_site.web_1_6_2') }}"><p>{{ trans('base_site.web_1_6_1') }}</p></div>
+  <div class="item" title="{{ trans('base_site.web_1_7_2') }}"><p>{{ trans('base_site.web_1_7_1') }}</p></div>
+  <div class="item w4" title=""><p>{{ trans('base_site.web_1_8_1') }}</p></div>
+  
+  <div class="item " title="{{ trans('base_site.web_1_9_2') }}"><p>{{ trans('base_site.web_1_9_1') }}</p></div>
+  <div class="item" title="{{ trans('base_site.web_1_10_2') }}"><p>{{ trans('base_site.web_1_10_1') }}</p></div>
+  <div class="item w4" title="{{ trans('base_site.web_1_11_2') }}content"><p>{{ trans('base_site.web_1_11_1') }}</p></div>
 </div>
 
 <div class="push-50"></div>

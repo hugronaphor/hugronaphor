@@ -28,7 +28,7 @@
       </div>
 
       @if ($vars['current_movie']['id'] == $item['id'])
-      <div class="current-thumb-overlay"><p class="">NOW PLAYING</p></div>
+      <div class="current-thumb-overlay"><p class="">{{ trans('base_site.movie_play') }}</p></div>
       @endif
 
     </a>

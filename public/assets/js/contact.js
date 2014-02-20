@@ -4,7 +4,11 @@ $(function() {
   var clonedHeaderRow = $(".base-header", this);
   $(".content").prepend(clonedHeaderRow.clone().removeClass('base-header'));
 
-  if ($(window).width() > 768) {
+  if ($(window).width() > 781) {
+    
+    var contact_string_1 = $('#contact_string_1').text();
+    var contact_string_2 = $('#contact_string_2').text();
+    var contact_string_3 = $('#contact_string_3').text();
 
     var dots = {
       0: {
@@ -65,7 +69,7 @@ $(function() {
         "x": 50,
         "y": 16,
         "interval": 100,
-        "text": '<span class="pink-point">.</span><span class="here-bottom">WAS HERE</span>',
+        "text": '<span class="pink-point">.</span><span class="here-bottom">'+contact_string_2+'</span>',
       },
       10: {
         "x": 49,
@@ -119,7 +123,7 @@ $(function() {
         "x": 39,
         "y": 35,
         "interval": 200,
-        "text": '<span class="pink-point">.</span><span class="here-top">WAS HERE</span>',
+        "text": '<span class="pink-point">.</span><span class="here-top">'+contact_string_2+'</span>',
       },
       19: {
         "x": 41,
@@ -167,7 +171,7 @@ $(function() {
         "x": 56,
         "y": 48,
         "interval": 200,
-        "text": '<span class="pink-point">.</span><span class="here-bottom">HERE</span>',
+        "text": '<span class="pink-point">.</span><span class="here-bottom">'+contact_string_1+'</span>',
       },
       27: {
         "x": 53,
@@ -197,7 +201,7 @@ $(function() {
         "x": 47,
         "y": 67,
         "interval": 100,
-        "text": '<span class="pink-point">.</span><span class="here-top">WILL BE HERE</span>',
+        "text": '<span class="pink-point">.</span><span class="here-top">'+contact_string_3+'</span>',
       }
     }
 
@@ -210,7 +214,7 @@ $(function() {
           class: 'dot-g',
           id: 'dot-' + key,
 //        style: 'top:' + obj['x'] + '%;left:' + (key*1.9) + '%',
-          style: 'top:' + obj['x'] + '%;left:' + (key * 2.1) + '%',
+          style: 'top:' + obj['x'] + '%;left:' + (key * 2.2) + '%',
         }).html(obj['text']).appendTo('.contact-animation');
         //document.getElementById('bump1').play();
         key++;
