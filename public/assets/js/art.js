@@ -64,7 +64,7 @@ $(function() {
 
   // Create base header clone.
   var clonedHeaderRow = $(".base-header", this);
-  $(".content").prepend(clonedHeaderRow.clone().removeClass('base-header'));
+  $(".content").prepend(clonedHeaderRow.clone().removeClass('base-header').addClass("behindHeader"));
 
   // Art block.
   if ($(window).width() > 1224) {

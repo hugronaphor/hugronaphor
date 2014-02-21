@@ -3,7 +3,7 @@ $(function() {
 
     // Create base header clone.
     var clonedHeaderRow = $(".base-header", this);
-    $(".content").prepend(clonedHeaderRow.clone().removeClass('base-header'));
+    $(".content").prepend(clonedHeaderRow.clone().removeClass('base-header').addClass("behindHeader"));
 
     // Find all YouTube videos
 //    var $allVideos = $("iframe[src^='http://www.vimeo.com']"),

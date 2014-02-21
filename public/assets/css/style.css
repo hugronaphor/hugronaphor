@@ -1891,6 +1891,9 @@ a.next img {
     margin: 10px auto 0;
     width: 110px;
   }
+  /* Disable top fixed header for device */
+  .base-header {position: initial!important;}
+  .behindHeader {display: none;}
 }
 
 @media only screen and (min-width: 320px) and (max-width: 680px) {
@@ -1940,8 +1943,6 @@ a.next img {
     padding: 0;
     height: 100px;
   }
-
-
 
   .fb-like {
     top: 23px;
@@ -2031,7 +2032,9 @@ a.next img {
     margin: 10px auto 0;
     width: 110px;
   }
-
+  /* Disable top fixed header for device */
+  .base-header {position: initial!important;}
+  .behindHeader {display: none;}
 }
 
 /*Kind of tablet*/
@@ -2055,10 +2058,6 @@ a.next img {
     z-index: 0;
   }
 
-  .floatingHeader {
-    display: none;
-  }
-
   /*Masonory*/
   .web #web-tags-container .item {
     width: 33.33%;
@@ -2080,7 +2079,6 @@ a.next img {
     top: 23px;
   }
 
-
   .h-top-phone {
     margin: 20px auto 10px !important;
     width: 200px;
@@ -2092,12 +2090,16 @@ a.next img {
   .art-block-3 {
     left: 7%;
   }
-  
+
   ul.language_bar_chooser {
-  font-size: 17px;
-  top: 4px;
-}
-  
+    font-size: 17px;
+    top: 4px;
+  }
+
+  /* Disable top fixed header for device */
+  .base-header {position: initial!important;}
+  .behindHeader {display: none;}
+
 }
 
 /*Large desktop*/

@@ -142,7 +142,7 @@ $(function() {
     clonedHeaderRow
             .before(clonedHeaderRow.clone())
             //.css("width", clonedHeaderRow.width())
-            .addClass("floatingHeader");
+            .addClass("floatingHeader behindHeader");
   });
 
   $(window).scroll(UpdateOnScroll).trigger("scroll");
