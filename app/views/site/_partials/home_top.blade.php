@@ -1,6 +1,9 @@
 <div class="home-top-land">
   <div class="h-top-phone">(+373) 69 311 477</div>
   <div class="fb-like" data-href="https://www.facebook.com/creativeyoungers" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+  
+  <div id="home-top-language-bar">{{ LaravelLocalization::getLanguageBar() }}</div>
+  
   <div class="brclear"></div>
   <div class="h-top-slogan-wrapp">
     <div class="h-top-slogan">      

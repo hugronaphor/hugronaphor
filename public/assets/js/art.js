@@ -1,5 +1,5 @@
 $(function() {
-  
+
   // Animate text on hover for Art slider.
   $('#art-carousel div.slider-block').hover(
           function() {
@@ -68,13 +68,14 @@ $(function() {
 
   // Art block.
   if ($(window).width() > 1224) {
+    var langMap = ($("#current-lang").text() == 'Romanian') ? 'text_ro' : 'text';
     // Initial build of all images.
     $("#art-animation").append('<img class="begin-art-animation" style="display:none;" src="/assets/img/art/art_animation_begin.png" />');
     for (var i = 1; i < 18; i++) {
       $("#art-animation").append('<img style="display:none;z-index:9;" src="/assets/img/art/animation/line/' + i + '.svg" />');
       if (i < 17) {
         $("#art-animation").append('<img style="display:none;z-index:10;" src="/assets/img/art/animation/point/' + i + '.svg" />');
-        $("#art-animation").append('<img style="display:none;z-index:11;" src="/assets/img/art/animation/text/' + i + '.svg" />');
+        $("#art-animation").append('<img style="display:none;z-index:11;" src="/assets/img/art/animation/' + langMap + '/' + i + '.svg" />');
       }
     }
     $("#art-animation").append('<img class="end-art-animation" style="display:none;" src="/assets/img/art/art_animation_end.png" />');

@@ -51,10 +51,7 @@
     @endif
 
     @endforeach
-
-
-
-
+    
     <!--    <li>
           <div class="slider-block">
             <img src="/uploads/art_1.jpg"/>
@@ -76,9 +73,6 @@
           </div>
         </li>-->
 
-
-
-
   </ul>
   <div class="clearfix"></div>
   <!--  <a id="prev2" class="prev" href="#">&lt;</a>-->
@@ -86,17 +80,28 @@
   <div id="pager" class="pager"></div>
 </div>
 <div class="art-block-7" id="art-how-we-work">
-  <img class="art-what-you-like" src="/assets/img/base/art_what_you_like.png" />
+  @if ($vars['current_lang'] == 'Romanian')
+  <img class="art-what-you-like" src="/assets/img/art/art_what_you_like_ro.jpg" />
+  @else
+  <img class="art-what-you-like" src="/assets/img/art/art_what_you_like.png" />
+  @endif
+
   <div id="art-animation"></div>
 
-  <div class="art-design-process-wrapp"><img class="art-design-process" src="/assets/img/base/art_design_processs.png" /></div>
+  <div class="art-design-process-wrapp">
+    @if ($vars['current_lang'] == 'Romanian')
+    <img class="art-design-process" src="/assets/img/art/art_design_processs_ro.jpg" />
+    @else
+    <img class="art-design-process" src="/assets/img/art/art_design_processs.png" />
+    @endif    
+  </div>
   <div class="clearfix"></div>
+  <div class="hide" id="current-lang">{{ $vars['current_lang'] }}</div>
 </div>
 
 {{-- HTML::script('assets/js/vendor/modernizr.custom.37797.js'); --}}
 {{ HTML::script('assets/js/vendor/carouFredSel-6.2.1/jquery.carouFredSel-6.2.1.js'); }}
 {{ HTML::script('assets/js/vendor/jquery-mousewheel/jquery.mousewheel.js'); }}
 {{ HTML::script('assets/js/art.js'); }}
-
 
 @stop

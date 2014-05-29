@@ -1,4 +1,5 @@
-$(function() {
+$(function(a) {
+
 
   initDesignHaos();
 
@@ -44,10 +45,10 @@ $(function() {
 
     // Haos text init.
     //if (!$(haosStringEl).hasClass('processed')) {
-      $(haosStringEl).find('span').each(function() {
-        $(this).animate({fontSize: '22px', 'fontweight': 'initial', fontstyle: 'normal'}, 0);
-        $(this).removeClass().parent().addClass('processed');
-      });
+    $(haosStringEl).find('span').each(function() {
+      $(this).animate({fontSize: '22px', 'fontweight': 'initial', fontstyle: 'normal'}, 0);
+      $(this).removeClass().parent().addClass('processed');
+    });
     //}
 
     return false;
@@ -60,7 +61,38 @@ $(function() {
   });
 
 
+  $(window).load(function() {
 
+   var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
+    /* Disable top fixed header */    
+    if(isMobile) {
+      //alert(navigator.userAgent);
+      $('.base-header').css({
+        "position": "initial!important"
+      });
+      $('.behindHeader').css({
+        "display": "none"
+      });
+
+      $('.home-top-land').css({
+        "position": "initial!important"
+      });
+
+
+//  .base-header {position: initial!important;}
+//  .behindHeader {display: none;}
+    }
+    else {
+      
+    }
+setMarginTopForBaseHeader();
+
+  });
+  //setMarginTopForBaseHeader(); // can't get right header height on first page load, I suppose because of images load.
+  //$('.header').css('margin-top', $(".home-top-land").height() - $(".slogan-signature").height());
+  $(window).resize(function() {
+    setMarginTopForBaseHeader();
+  });
 
 
   var baseHeader = $(".base-header");
@@ -68,16 +100,6 @@ $(function() {
   var offset = baseHeader.offset();
   var baseHeaderTop = offset.top;
   var topHeaderHeight = $(".home-top-land").height();
-
-  $(window).load(function() {
-    // executes when complete page is fully loaded.
-    setMarginTopForBaseHeader();
-  });
-  //setMarginTopForBaseHeader(); // can't get right header height on first page load, I suppose because of images load.
-  //$('.header').css('margin-top', $(".home-top-land").height() - $(".slogan-signature").height());
-  $(window).resize(function() {
-    setMarginTopForBaseHeader()
-  });
 
   function setMarginTopForBaseHeader() {
     $('.header').css('margin-top', $(".home-top-land").height());
@@ -91,7 +113,8 @@ $(function() {
               offset = el.offset(),
               scrollTop = $(window).scrollTop(),
               floatingHeader = $(".floatingHeader", this),
-              tremendousEl = $('.home-about-facts'),
+              languageBaseBar = $(".home .floatingHeader .language_bar_chooser"),
+              tremendousEl = $(".home-about-facts"),
               haosStringEl = $(".home-art-block-img"),
               tremendousElOffset = tremendousEl.offset(),
               haosStringElOffset = haosStringEl.offset();
@@ -120,12 +143,16 @@ $(function() {
       });
 
       if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+
+        languageBaseBar.show();
+
         floatingHeader.css({
           "visibility": "visible"
         });
-        $('.fb-like').addClass('fb-in-fixed-header');
+        //$('.fb-like').addClass('fb-in-fixed-header');
 
       } else {
+        languageBaseBar.hide();
         floatingHeader.css({
           "visibility": "hidden"
         });
@@ -169,21 +196,18 @@ $(function() {
   }
 
 // run js if Chrome is being used
-if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+  if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
     // set background-attachment back to the default of 'scroll'
     $('.video-our-culture').css('background-attachment', 'scroll');
 
     // move the background-position according to the div's y position
-    $(window).scroll(function(){
-
-        scrollTop = $(window).scrollTop();
-        photoTop = $('.video-our-culture').offset().top;
-        distance = (photoTop - scrollTop);
-        $('.video-our-culture').css('background-position', 'center ' + (distance*-1) + 'px');
-
+    $(window).scroll(function() {
+      scrollTop = $(window).scrollTop();
+      photoTop = $('.video-our-culture').offset().top;
+      distance = (photoTop - scrollTop);
+      $('.video-our-culture').css('background-position', 'center ' + (distance * -1) + 'px');
     });
-}  
-
+  }
 
 });
 /**

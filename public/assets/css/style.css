@@ -112,6 +112,10 @@ ul.language_bar_chooser {
 
 ul.language_bar_chooser li {
   display: inline;
+  padding: 0 0 0 10px;
+}
+ul.language_bar_chooser li a {
+  padding: 0;
 }
 
 ul.language_bar_chooser ul li a {
@@ -154,6 +158,9 @@ ul.language_bar_chooser ul li a {
   color: rgb(133, 132, 138);
   background: none;
   font-size: 20px;
+}
+.base-navigation ul.language_bar_chooser li a {  
+  padding: 0px;
 }
 
 /* Try to do transition effect. */
@@ -490,10 +497,10 @@ ul.language_bar_chooser ul li a {
 
 .footer .contact-contacts {
   position: relative;
-  padding-top: 45px;
+  padding-top: 55px;
   margin: 0 auto;
   width: 60%;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 .copywrite {
   margin: 0 auto;
@@ -509,10 +516,10 @@ ul.language_bar_chooser ul li a {
   margin: 0 auto;
   width: 300px;
   font-size: 0.5em;
-  border-top: 1px solid rgb(252, 252, 252);
+  /*border-top: 1px solid rgb(252, 252, 252);*/
   bottom: 0;
   position: relative;
-  margin-top: 55px;
+  margin-top: 50px;
 }
 
 .copywrite p {
@@ -569,6 +576,21 @@ ul.language_bar_chooser ul li a {
   position: absolute !important;
   right: 20px;
   top: 70px;
+}
+
+#home-top-language-bar ul {
+  position: absolute !important;
+  right: 135px;
+  top: 72px;
+  font-size: 22px;
+}
+
+.base-header .language_bar_chooser {
+  margin: -4px 10px 0 0;
+}
+
+.home .base-header .language_bar_chooser {
+  display: none;
 }
 
 /*.fb-like.fb-in-fixed-header {
@@ -791,14 +813,14 @@ ul.language_bar_chooser ul li a {
   width: 100%;
   background: rgb(131, 210, 229);
   margin-top: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 
 }
 
 p.about-facts-title {
   font-family: 'bebas_neueregular';
   font-size: 34px;
-  padding-top: 35px;
+  padding-top: 40px;
   display: block;
   position: relative;
 
@@ -962,18 +984,23 @@ p.about-facts-title {
 }
 
 .h-video-wrapp {
-  width: 100%;
+  max-width: 100%;
   position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 #video_background {
-  width: 100%;
-  height: auto;
   position: relative;
   top: 0;
   left: 0;
   display: block;
-  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .h-video-on-video {
@@ -1428,7 +1455,7 @@ a.next img {
 }
 
 .art-block-4 {
-  width: 100%;
+  width: 85%;
   padding: 0px;
   background: rgba(0, 0, 0, 0);
   color: inherit;
@@ -1718,6 +1745,16 @@ a.next img {
   color: rgb(214, 140, 175)
 }
 
+ul.language_bar_chooser {
+  color: rgb(133, 132, 138);
+}
+ul.language_bar_chooser li {
+  font-size: 22px;
+}
+ul.language_bar_chooser li.active {
+  color: black;
+  font-size: 22px;
+}
 
 
 
@@ -1894,6 +1931,32 @@ a.next img {
   /* Disable top fixed header for device */
   .base-header {position: initial!important;}
   .behindHeader {display: none;}
+
+  #home-top-language-bar ul {
+    top: 0;
+    right: 5px;
+  }
+  #home-top-language-bar {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .movie-thumbs-wrapper {
+    margin: 10px 0 50px;
+    font-size: 15px;
+  }
+  .video-thumb-box .credentials {
+    font-size: 15px;
+  }
+  .movie-thumbs-wrapper {
+    margin: 10px 0 50px;
+  }
+  .language_bar_chooser {
+    display: none!important;
+  }
+  .video-thumb-box .thumb-play-btn {
+    display:none;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 680px) {
@@ -1902,11 +1965,11 @@ a.next img {
   }
 
   .base-navigation {
-    padding: 0px 0;
+    /*padding: 0px 0;*/
   }
 
   .base-navigation ul li a {
-    padding: 0px 10px 0px 10px;
+    /*padding: 0px 10px 0px 10px;*/
     font-size: 1em;
   }
 
@@ -2011,6 +2074,7 @@ a.next img {
   .art-block-4 {
     left: auto;
     text-align: center;
+    width: 100%;
   }
 
   .art-block-1 {
@@ -2035,17 +2099,43 @@ a.next img {
   /* Disable top fixed header for device */
   .base-header {position: initial!important;}
   .behindHeader {display: none;}
+
+  #home-top-language-bar ul {
+    top: 29px;
+    right: 27px;
+  }
+  .movie-current-wrapper {
+    margin: 15px 0 0;
+  }
+  .movie-thumbs-wrapper {
+    margin: 10px 0 50px;
+    font-size: 17px;
+  }
+  .video-thumb-box .credentials {
+    font-size: 17px;
+    left: 7px;
+  }
+  .video-thumb-box .thumb-play-btn {
+    display:none;
+  }
+  .video-thumb-box .title {
+    left: 7px;
+    top: 5px;
+  }
+  .language_bar_chooser {
+    display: none!important;
+  }
 }
 
 /*Kind of tablet*/
 @media only screen and (min-width: 680px) and (max-width: 1024px) {
 
   .base-navigation {
-    padding: 0px 0;
+    /*padding: 0px 0;*/
   }
 
   .base-navigation ul li a {
-    padding: 0px 10px 0px 10px;
+    /*padding: 0px 10px 0px 10px;*/
     font-size: 1em;
   }
 
@@ -2077,6 +2167,8 @@ a.next img {
 
   .fb-like {
     top: 23px;
+    left: 135px;
+    width: 100px!important;
   }
 
   .h-top-phone {
@@ -2093,16 +2185,40 @@ a.next img {
 
   ul.language_bar_chooser {
     font-size: 17px;
-    top: 4px;
   }
 
   /* Disable top fixed header for device */
   .base-header {position: initial!important;}
   .behindHeader {display: none;}
 
+  #home-top-language-bar ul {
+    top: 29px;
+  }
+
+  .movie-thumbs-wrapper {
+    margin: 10px 0 50px;
+    font-size: 19px;
+  }
+  .video-thumb-box .credentials {
+    font-size: 19px;
+  }
+  .movie-thumbs-wrapper {
+    margin: 10px 0 50px;
+  }
+
+
 }
 
 /*Large desktop*/
 @media only screen and (min-width: 1024px) {
 
+}
+
+/*Iphone 4*/
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  /* Disable top fixed header */
+  .base-header {position: initial!important;}
+  .behindHeader {display: none;}
 }

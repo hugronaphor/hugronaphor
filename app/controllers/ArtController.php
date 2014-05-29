@@ -45,6 +45,7 @@ class ArtController extends BaseController {
     $this->vars['art_items'] = $newOrderedArt;
 
     $this->vars['title'] = 'Art';
+    $this->vars['current_lang'] = LaravelLocalization::getCurrentLocaleName();
     return \View::make('site.art.index')->with('vars', $this->vars);
   }
 

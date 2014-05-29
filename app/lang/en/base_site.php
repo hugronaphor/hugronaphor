@@ -13,7 +13,7 @@ return array(
   /* General */
   "general_we_do" => "WE DO",
   "footer_1" => "CONTACT US",
-  "footer_2" => "Copywrite 2013 Youngers. All rights reserved",
+  "footer_2" => "Copyright 2013 Youngers. All rights reserved",
   "footer_3" => "tel",
   "footer_4" => "",
   /* End General */
@@ -27,7 +27,7 @@ return array(
 
   /* Menu */
   "menu_main_art" => "ART",
-  "menu_main_movie" => "MOVIE",
+  "menu_main_movie" => "VIDEO",
   "menu_main_web" => "WEB",
   "menu_main_contact" => "CONTACT",
   /* End Menu */
@@ -52,7 +52,7 @@ return array(
   "home_movie_3" => "Cups of Coffe",
   "home_movie_4" => "Minutes on Facebook",
   "home_movie_5" => "Clients",
-  "home_movie_6" => "WE MAKE THINGS MOVE",
+  "home_movie_6" => "VIDEO",
   "home_movie_7" => "Design and production of interactive videos and motion graphics,",
   "home_movie_8" => "tailored to bring your brand messaging to life.",
   "home_movie_9" => "OUR CULTURE",

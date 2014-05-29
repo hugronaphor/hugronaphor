@@ -13,7 +13,7 @@ return array(
   /* General */
   "general_we_do" => "NOI FACEM",
   "footer_1" => "CONTACTEAZA-NE",
-  "footer_2" => "Copywrite 2013 Youngers. Toate drepturile rezervate",
+  "footer_2" => "Copyright 2013 Youngers. Toate drepturile rezervate",
   "footer_3" => "phone",
   "footer_4" => "",
   /* End General */
@@ -27,7 +27,7 @@ return array(
 
   /* Menu */
   "menu_main_art" => "ARTA",
-  "menu_main_movie" => "FILM",
+  "menu_main_movie" => "VIDEO",
   "menu_main_web" => "WEB",
   "menu_main_contact" => "CONTACTE",
   /* End Menu */
@@ -50,7 +50,7 @@ return array(
   "home_movie_3" => "Cani de Cafea",
   "home_movie_4" => "Minute pe Facebook",
   "home_movie_5" => "Clienti",
-  "home_movie_6" => "NOI FACEM LUCRURILE SA SE MISTE",
+  "home_movie_6" => "VIDEO",
 //  Design and production of interactive videos and motion graphics,
 //  tailored to bring your brand messaging to life.
   "home_movie_7" => "Designul si productia clipurilor video si graficii animate,",

@@ -68,7 +68,7 @@
 
     <!--      poster="/assets/img/base/logo.png"-->
 
-    <video id="video_background" autoplay preload muted loop>
+    <video id="video_background" controls="controls" muted="muted" preload="auto" loop="true" autoplay="true">
       <!-- autoplay> -->
       <source src="{{asset('/assets/video/move_things.mp4')}}" type="video/mp4">
       <source src="{{asset('/assets/video/move_things.ogg')}}" type="video/ogg">
@@ -77,6 +77,17 @@
       <!--        <embed width="320" height="240" src="movie.swf">-->
       <!--      </object>-->
     </video>
+
+<!--Video example-->
+<!--    <video poster="http://artbees.net/themes/jupiter-demo/wp-content/uploads/2013/10/home-vid-img.jpg" controls="controls" muted="muted" preload="auto" loop="true" autoplay="true">
+      <source type="video/mp4" src="http://artbees.net/themes/jupiter-demo/wp-content/uploads/2013/10/homepage.mp4">
+      <source type="video/webm" src="http://artbees.net/themes/jupiter-demo/wp-content/uploads/2013/10/homepage.webm">
+      <object width="1900" height="1060" type="application/x-shockwave-flash" data="http://artbees.net/themes/jupiter-demo/wp-content/themes/jupiter/js/flashmediaelement.swf">
+        <param name="movie" value="http://artbees.net/themes/jupiter-demo/wp-content/themes/jupiter/js/flashmediaelement.swf">
+        <param name="flashvars" value="controls=true&amp;file=http://artbees.net/themes/jupiter-demo/wp-content/uploads/2013/10/homepage.mp4">
+        <img src="http://artbees.net/themes/jupiter-demo/wp-content/uploads/2013/10/home-vid-img.jpg" title="No video playback capabilities">
+      </object>
+    </video>-->
 
     <div class="h-video-on-video">
       <div class="h-video-centered-content valign">
@@ -126,7 +137,7 @@
   <div class="brclear"></div>
   <div class="push-50"></div>
 </div>
-
+{{-- HTML::script('assets/js/vendor/detectmobilebrowser.js'); --}}
 {{ HTML::script('assets/js/home.js'); }}
 
 @stop

@@ -6,6 +6,8 @@ $(function() {
 
   if ($(window).width() > 781) {
     
+    $('.contact-slogan').show(200);
+    
     var contact_string_1 = $('#contact_string_1').text();
     var contact_string_2 = $('#contact_string_2').text();
     var contact_string_3 = $('#contact_string_3').text();
@@ -228,7 +230,8 @@ $(function() {
 
   }
   else {
-    $('.contact-animation').append('IMAGE TO REPLACE ANIMATION');
+    // Nothing.
+    // $('.contact-animation').append('IMAGE TO REPLACE ANIMATION');    
   }
 
 
