@@ -191,8 +191,8 @@ setMarginTopForBaseHeader();
             cultureHeight = $('.video-our-culture').height(),
             el2 = $('.h-culture-centered');
     //el1.css({height: videoHeight, marginTop: -videoHeight -5 });
-    $('.h-video-centered-content').css({top: videoHeight / 2 - $('.h-video-centered-content').height() / 2});
-    el2.css({top: cultureHeight / 2 - el2.height() / 2});
+//    $('.h-video-centered-content').css({top: videoHeight / 2 - $('.h-video-centered-content').height() / 2});
+//    el2.css({top: cultureHeight / 2 - el2.height() / 2});
   }
 
 // run js if Chrome is being used

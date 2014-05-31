@@ -15,8 +15,8 @@
   </div>
   <div class="form-group">
     {{ Form::label('url', 'Video Url') }}
-    <div class="controls">
-      {{ Form::text('url') }}
+    <div class="controls">      
+      {{ Form::text('url', $row->url, array('placeholder'=>'Please use strict url format like: http://vimeo.com/29252510')) }}
     </div>
     {{ Form::label('width', 'Video Width') }}
     <div class="controls">
@@ -29,7 +29,7 @@
   </div>
   {{ Form::label('author', 'Author') }}
   <div class="controls">
-    {{ Form::text('author') }}
+    {{ Form::text('author', $row->author) }}
   </div>
   {{ Form::label('year', 'Year') }}
   <div class="controls">

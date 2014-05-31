@@ -5,9 +5,9 @@ $(function() {
   $(".content").prepend(clonedHeaderRow.clone().removeClass('base-header').addClass("behindHeader"));
 
   if ($(window).width() > 781) {
-    
+
     $('.contact-slogan').show(200);
-    
+
     var contact_string_1 = $('#contact_string_1').text();
     var contact_string_2 = $('#contact_string_2').text();
     var contact_string_3 = $('#contact_string_3').text();
@@ -71,7 +71,7 @@ $(function() {
         "x": 50,
         "y": 16,
         "interval": 100,
-        "text": '<span class="pink-point">.</span><span class="here-bottom">'+contact_string_2+'</span>',
+        "text": '<span class="pink-point">.</span><span class="here-bottom">' + contact_string_2 + '</span>',
       },
       10: {
         "x": 49,
@@ -125,7 +125,7 @@ $(function() {
         "x": 39,
         "y": 35,
         "interval": 200,
-        "text": '<span class="pink-point">.</span><span class="here-top">'+contact_string_2+'</span>',
+        "text": '<span class="pink-point">.</span><span class="here-top">' + contact_string_2 + '</span>',
       },
       19: {
         "x": 41,
@@ -173,7 +173,7 @@ $(function() {
         "x": 56,
         "y": 48,
         "interval": 200,
-        "text": '<span class="pink-point">.</span><span class="here-bottom">'+contact_string_1+'</span>',
+        "text": '<span class="pink-point">.</span><span class="here-bottom">' + contact_string_1 + '</span>',
       },
       27: {
         "x": 53,
@@ -203,7 +203,7 @@ $(function() {
         "x": 47,
         "y": 67,
         "interval": 100,
-        "text": '<span class="pink-point">.</span><span class="here-top">'+contact_string_3+'</span>',
+        "text": '<span class="pink-point">.</span><span class="here-top">' + contact_string_3 + '</span>',
       }
     }
 
@@ -231,11 +231,9 @@ $(function() {
   }
   else {
     // Nothing.
-    // $('.contact-animation').append('IMAGE TO REPLACE ANIMATION');    
+    $('.contact .push').css('height', '1em');
+    $(".contact .push-40, .contact-animation").remove();
   }
-
-
-
 
 //  var divToChange = '.base-content-nav.max';
 //  vAlignDiv(divToChange)

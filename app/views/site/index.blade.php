@@ -68,7 +68,7 @@
 
     <!--      poster="/assets/img/base/logo.png"-->
 
-    <video id="video_background" controls="controls" muted="muted" preload="auto" loop="true" autoplay="true">
+    <video id="video_background" muted="muted" preload="auto" loop="true" autoplay="true">
       <!-- autoplay> -->
       <source src="{{asset('/assets/video/move_things.mp4')}}" type="video/mp4">
       <source src="{{asset('/assets/video/move_things.ogg')}}" type="video/ogg">

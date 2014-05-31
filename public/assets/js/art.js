@@ -147,7 +147,7 @@ $(function() {
   }
   else {
     // Simple image instead scroll animation.
-    $("#art-animation").append('<img class="no-art-animation-img" src="/assets/img/art/animation/line/final.svg" />');
+    $("#art-animation").append('<img class="no-art-animation-img" src="/assets/img/base/how_we_do.png" />');
     // Set art image area height.
     $(window).load(function() {
       $('#art-animation').css('height', $('#art-animation img').eq(0).height());

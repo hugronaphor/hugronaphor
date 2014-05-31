@@ -499,7 +499,7 @@ ul.language_bar_chooser ul li a {
   position: relative;
   padding-top: 55px;
   margin: 0 auto;
-  width: 60%;
+  //width: 60%;
   font-size: 0.8em;
 }
 .copywrite {
@@ -1756,15 +1756,6 @@ ul.language_bar_chooser li.active {
   font-size: 22px;
 }
 
-
-
-
-
-
-
-
-
-
 .push-10 {
   height: 10px;
   clear: both;
@@ -1817,6 +1808,13 @@ ul.language_bar_chooser li.active {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
+
+  .h-video-on-video {
+    background: url('../img/base/front_video_bg.jpg') no-repeat center right;
+  }
+  .video-our-culture {
+    background: url("../img/base/book.jpg") no-repeat center;
+  }
 
   .push {
     height: 0;
@@ -1960,6 +1958,14 @@ ul.language_bar_chooser li.active {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 680px) {
+
+  .h-video-on-video {
+    background: url('../img/base/front_video_bg.jpg') no-repeat center right;
+  }
+  .video-our-culture {
+    background: url("../img/base/book.jpg") no-repeat center;
+  }
+
   .logo-img-wrapper {
     max-width: 150px;
   }
@@ -2129,6 +2135,12 @@ ul.language_bar_chooser li.active {
 
 /*Kind of tablet*/
 @media only screen and (min-width: 680px) and (max-width: 1024px) {
+  .h-video-on-video {
+    //background: url('../img/base/front_video_bg.jpg') no-repeat center right;*/
+  }
+  .video-our-culture {
+    background: url("../img/base/book.jpg") no-repeat center;
+  }
 
   .base-navigation {
     /*padding: 0px 0;*/

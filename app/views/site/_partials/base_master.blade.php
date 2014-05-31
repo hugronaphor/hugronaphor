@@ -9,14 +9,14 @@
     <title>{{ isset($vars['title']) ? $vars['title'] . " | " : ""}} Youngers</title>
 
     <link rel="icon" type="image/gif" href="/assets/img/base/favicon.png">
-    <link rel="image_src" href="/assets/img/base/logo.jpg"/>
-    <meta name="description" content="Digital agency">
+    <link rel="image_src" href="/assets/img/base/youngers-social-image.jpg"/>
+    <meta name="description" content="{{ trans('base_site.fb_meta_description') }}">
     <meta name="keywords" content="Design, Web design, Web Development, Video, Art">
     <meta property="og:site_name" content="Youngers"/>
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="/assets/img/base/logo.jpg"/>
-    <meta property="og:description" content="Youngers is an advertising agency. Our aim is to develop a proper business relationships." />
-    
+    <meta property="og:image" content="/assets/img/base/youngers-social-image.jpg"/>
+    <meta property="og:description" content="{{ trans('base_site.fb_meta_description') }}" />
+
     <meta name="viewport" content="width=device-width">
     {{ HTML::style('assets/css/normalize.css'); }}
     {{ HTML::style('assets/css/style.css'); }}
@@ -24,7 +24,7 @@
     src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
 <!--    <script
     src="http://youngers/assets/js/vendor/carouFredSel-6.2.1/jquery-1.8.2.min.js"></script>-->
-    
+
   </head>
   <body>
 
@@ -56,5 +56,22 @@
         </div>
         <div class="clearfix"></div>
       </div>
+      <script>
+(function(i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r;
+  i[r] = i[r] || function() {
+    (i[r].q = i[r].q || []).push(arguments)
+  }, i[r].l = 1 * new Date();
+  a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-51522280-1', 'creativeyoungers.com');
+ga('send', 'pageview');
+
+      </script>
   </body>
 </html>

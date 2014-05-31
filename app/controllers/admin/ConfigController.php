@@ -12,7 +12,8 @@ use Str;
 class ConfigController extends \BaseController {
 
   public function index() {
-
+    //var_dump(Input::get());
+    
     $vars = \DB::table('variables')->whereIn('name', array(
       'site_name',
       'footer_contact_text'
@@ -20,7 +21,7 @@ class ConfigController extends \BaseController {
     foreach ($vars as $var) {
       $vars[$var->name] = $var->value;
     }
-
+//dd($_POST);
     return \View::make('admin.config.index')->with('vars', $vars);
   }
 
@@ -37,6 +38,9 @@ class ConfigController extends \BaseController {
   }
 
   public function update($id) {
+    //dd(Input::get('site_name'));
+    
+    return Redirect::route('admin.config.index');
   }
 
   public function destroy($id) {

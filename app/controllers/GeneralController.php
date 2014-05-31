@@ -53,7 +53,6 @@ class GeneralController extends BaseController {
       $vars[$var->name] = $var->value;
     }
 
-
     return \View::make('site.raphael')->with('vars', $this->vars);
   }
 
@@ -66,9 +65,9 @@ class GeneralController extends BaseController {
 
     $movies = DB::table('video')
       ->leftJoin('files', 'video.image', '=', 'files.fid')
-//          ->get();
+      //->get();
       ->paginate(6);
-//dd($movies);
+
     $new_movies = array();
     foreach ($movies as $key => $movie) {
       $new_movies[$movie->vid]['thumbnail'] = !empty($movie->path) ? $movie->path : '/uploads/no-image.jpg';

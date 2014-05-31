@@ -16,6 +16,8 @@ return array(
   "footer_2" => "Copyright 2013 Youngers. Toate drepturile rezervate",
   "footer_3" => "phone",
   "footer_4" => "",
+  "fb_meta_description" => "Suntem o echipa de individualitati pasionate, care iubesc colaborarea pentru a realiza design de exceptie impreuna cu clientii nostri.",
+ 
   /* End General */
 
   /* Contact */

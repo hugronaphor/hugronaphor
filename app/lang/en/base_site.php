@@ -16,6 +16,7 @@ return array(
   "footer_2" => "Copyright 2013 Youngers. All rights reserved",
   "footer_3" => "tel",
   "footer_4" => "",
+  "fb_meta_description" => "We’re a team of passionate, dedicated individuals who love collaborating to make exceptional design with our clients.",
   /* End General */
   
   /* Contact */
